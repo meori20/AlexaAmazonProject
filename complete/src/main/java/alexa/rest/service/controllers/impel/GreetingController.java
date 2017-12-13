@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import alexa.rest.service.controllers.interfaces.IGreetingController;
-import alexa.rest.service.exe.impel.Greeting;
+import alexa.rest.service.delegates.impel.GreetingDelegate;
 
 @RestController
 public class GreetingController implements IGreetingController {
@@ -16,8 +16,8 @@ public class GreetingController implements IGreetingController {
 
     @Override
     @RequestMapping("/greeting")
-    public Greeting greeting(@RequestParam(value="name", defaultValue="World") String name) {
-        return new Greeting(counter.incrementAndGet(),
+    public GreetingDelegate greeting(@RequestParam(value="name", defaultValue="World") String name) {
+        return new GreetingDelegate(counter.incrementAndGet(),
                             String.format(template, name));
     }
 }

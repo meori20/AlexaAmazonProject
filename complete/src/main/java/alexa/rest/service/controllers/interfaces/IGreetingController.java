@@ -2,8 +2,9 @@ package alexa.rest.service.controllers.interfaces;
 
 import org.springframework.web.bind.annotation.RequestParam;
 
-import alexa.rest.service.exe.impel.Greeting;
+import alexa.rest.service.delegates.impel.GreetingDelegate;
+
 
 public interface IGreetingController {
-	public Greeting greeting(@RequestParam(value="name", defaultValue="World") String name);
+	public GreetingDelegate greeting(@RequestParam(value="name", defaultValue="World") String name);
 }
