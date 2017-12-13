@@ -1,9 +1,10 @@
-package alexa.rest.service.exe.impel;
+package alexa.rest.service.controllers.impel;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import alexa.rest.service.exe.interfaces.IApplication;
+import alexa.rest.service.controllers.interfaces.IApplication;
+
 
 @SpringBootApplication
 public class Application implements IApplication {
