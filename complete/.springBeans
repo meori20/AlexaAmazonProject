@@ -7,9 +7,21 @@
 	</configSuffixes>
 	<enableImports><![CDATA[false]]></enableImports>
 	<configs>
+		<config>java:alexa.rest.service.delegates.config.DelegatesBeansConfig</config>
 	</configs>
 	<autoconfigs>
+		<config>java:alexa.rest.service.controllers.impel.Application</config>
 	</autoconfigs>
 	<configSets>
+		<configSet>
+			<name><![CDATA[DelegateConfig]]></name>
+			<allowBeanDefinitionOverriding>true</allowBeanDefinitionOverriding>
+			<incomplete>false</incomplete>
+			<configs>
+				<config>java:alexa.rest.service.delegates.config.DelegatesBeansConfig</config>
+			</configs>
+			<profiles>
+			</profiles>
+		</configSet>
 	</configSets>
 </beansProjectDescription>
