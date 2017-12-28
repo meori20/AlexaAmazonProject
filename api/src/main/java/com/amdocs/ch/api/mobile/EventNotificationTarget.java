@@ -20,6 +20,8 @@ public abstract class EventNotificationTarget  implements java.io.Serializable {
 
     private com.amdocs.ch.api.mobile.Id userId;
 
+    private com.amdocs.ch.api.mobile.Id userSiteId;
+
     public EventNotificationTarget() {
     }
 
@@ -29,13 +31,15 @@ public abstract class EventNotificationTarget  implements java.io.Serializable {
            java.lang.String message,
            com.amdocs.ch.api.mobile.NotificationCategory notificationCategory,
            java.lang.String title,
-           com.amdocs.ch.api.mobile.Id userId) {
+           com.amdocs.ch.api.mobile.Id userId,
+           com.amdocs.ch.api.mobile.Id userSiteId) {
            this.media = media;
            this.targetType = targetType;
            this.message = message;
            this.notificationCategory = notificationCategory;
            this.title = title;
            this.userId = userId;
+           this.userSiteId = userSiteId;
     }
 
 
@@ -158,6 +162,26 @@ public abstract class EventNotificationTarget  implements java.io.Serializable {
         this.userId = userId;
     }
 
+
+    /**
+     * Gets the userSiteId value for this EventNotificationTarget.
+     * 
+     * @return userSiteId
+     */
+    public com.amdocs.ch.api.mobile.Id getUserSiteId() {
+        return userSiteId;
+    }
+
+
+    /**
+     * Sets the userSiteId value for this EventNotificationTarget.
+     * 
+     * @param userSiteId
+     */
+    public void setUserSiteId(com.amdocs.ch.api.mobile.Id userSiteId) {
+        this.userSiteId = userSiteId;
+    }
+
     private java.lang.Object __equalsCalc = null;
     public synchronized boolean equals(java.lang.Object obj) {
         if (!(obj instanceof EventNotificationTarget)) return false;
@@ -187,7 +211,10 @@ public abstract class EventNotificationTarget  implements java.io.Serializable {
               this.title.equals(other.getTitle()))) &&
             ((this.userId==null && other.getUserId()==null) || 
              (this.userId!=null &&
-              this.userId.equals(other.getUserId())));
+              this.userId.equals(other.getUserId()))) &&
+            ((this.userSiteId==null && other.getUserSiteId()==null) || 
+             (this.userSiteId!=null &&
+              this.userSiteId.equals(other.getUserSiteId())));
         __equalsCalc = null;
         return _equals;
     }
@@ -216,6 +243,9 @@ public abstract class EventNotificationTarget  implements java.io.Serializable {
         }
         if (getUserId() != null) {
             _hashCode += getUserId().hashCode();
+        }
+        if (getUserSiteId() != null) {
+            _hashCode += getUserSiteId().hashCode();
         }
         __hashCodeCalc = false;
         return _hashCode;
@@ -265,6 +295,13 @@ public abstract class EventNotificationTarget  implements java.io.Serializable {
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("userId");
         elemField.setXmlName(new javax.xml.namespace.QName("", "userId"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "id"));
+        elemField.setMinOccurs(0);
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("userSiteId");
+        elemField.setXmlName(new javax.xml.namespace.QName("", "userSiteId"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "id"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);

@@ -22,6 +22,7 @@ public class MobilePushNotificationTarget  extends com.amdocs.ch.api.mobile.Even
            com.amdocs.ch.api.mobile.NotificationCategory notificationCategory,
            java.lang.String title,
            com.amdocs.ch.api.mobile.Id userId,
+           com.amdocs.ch.api.mobile.Id userSiteId,
            java.lang.String logConfigReason,
            com.amdocs.ch.api.mobile.EventNotificationTargetType targetType) {
         super(
@@ -30,7 +31,8 @@ public class MobilePushNotificationTarget  extends com.amdocs.ch.api.mobile.Even
             message,
             notificationCategory,
             title,
-            userId);
+            userId,
+            userSiteId);
         this.logConfigReason = logConfigReason;
         this.targetType = targetType;
     }

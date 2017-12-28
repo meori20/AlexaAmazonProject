@@ -23,12 +23,14 @@ public class ScenarioType implements java.io.Serializable {
     public static final java.lang.String _DOOR_LOCK = "DOOR_LOCK";
     public static final java.lang.String _MANUAL = "MANUAL";
     public static final java.lang.String _LOCATION = "LOCATION";
+    public static final java.lang.String _NFC = "NFC";
     public static final ScenarioType DEVICE = new ScenarioType(_DEVICE);
     public static final ScenarioType TIME = new ScenarioType(_TIME);
     public static final ScenarioType MODE = new ScenarioType(_MODE);
     public static final ScenarioType DOOR_LOCK = new ScenarioType(_DOOR_LOCK);
     public static final ScenarioType MANUAL = new ScenarioType(_MANUAL);
     public static final ScenarioType LOCATION = new ScenarioType(_LOCATION);
+    public static final ScenarioType NFC = new ScenarioType(_NFC);
     public java.lang.String getValue() { return _value_;}
     public static ScenarioType fromValue(java.lang.String value)
           throws java.lang.IllegalArgumentException {

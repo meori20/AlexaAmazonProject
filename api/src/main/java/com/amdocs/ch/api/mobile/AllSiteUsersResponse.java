@@ -1,54 +1,54 @@
 /**
- * AuthenticationResponse.java
+ * AllSiteUsersResponse.java
  *
  * This file was auto-generated from WSDL
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package com.amdocs.ch.publicapi.service;
+package com.amdocs.ch.api.mobile;
 
-public class AuthenticationResponse  extends com.amdocs.ch.publicapi.service.PublicAPIResponse  implements java.io.Serializable {
-    private com.amdocs.ch.publicapi.service.AuthDetails authenticationDetails;
+public class AllSiteUsersResponse  extends com.amdocs.ch.api.mobile.MobileHomeServiceResponse  implements java.io.Serializable {
+    private com.amdocs.ch.api.mobile.UserSiteFullInfo[] userSites;
 
-    public AuthenticationResponse() {
+    public AllSiteUsersResponse() {
     }
 
-    public AuthenticationResponse(
+    public AllSiteUsersResponse(
            boolean success,
            java.lang.String faultCode,
            java.lang.String faultDescription,
-           com.amdocs.ch.publicapi.service.AuthDetails authenticationDetails) {
+           com.amdocs.ch.api.mobile.UserSiteFullInfo[] userSites) {
         super(
             success,
             faultCode,
             faultDescription);
-        this.authenticationDetails = authenticationDetails;
+        this.userSites = userSites;
     }
 
 
     /**
-     * Gets the authenticationDetails value for this AuthenticationResponse.
+     * Gets the userSites value for this AllSiteUsersResponse.
      * 
-     * @return authenticationDetails
+     * @return userSites
      */
-    public com.amdocs.ch.publicapi.service.AuthDetails getAuthenticationDetails() {
-        return authenticationDetails;
+    public com.amdocs.ch.api.mobile.UserSiteFullInfo[] getUserSites() {
+        return userSites;
     }
 
 
     /**
-     * Sets the authenticationDetails value for this AuthenticationResponse.
+     * Sets the userSites value for this AllSiteUsersResponse.
      * 
-     * @param authenticationDetails
+     * @param userSites
      */
-    public void setAuthenticationDetails(com.amdocs.ch.publicapi.service.AuthDetails authenticationDetails) {
-        this.authenticationDetails = authenticationDetails;
+    public void setUserSites(com.amdocs.ch.api.mobile.UserSiteFullInfo[] userSites) {
+        this.userSites = userSites;
     }
 
     private java.lang.Object __equalsCalc = null;
     public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof AuthenticationResponse)) return false;
-        AuthenticationResponse other = (AuthenticationResponse) obj;
+        if (!(obj instanceof AllSiteUsersResponse)) return false;
+        AllSiteUsersResponse other = (AllSiteUsersResponse) obj;
         if (obj == null) return false;
         if (this == obj) return true;
         if (__equalsCalc != null) {
@@ -57,9 +57,9 @@ public class AuthenticationResponse  extends com.amdocs.ch.publicapi.service.Pub
         __equalsCalc = obj;
         boolean _equals;
         _equals = super.equals(obj) && 
-            ((this.authenticationDetails==null && other.getAuthenticationDetails()==null) || 
-             (this.authenticationDetails!=null &&
-              this.authenticationDetails.equals(other.getAuthenticationDetails())));
+            ((this.userSites==null && other.getUserSites()==null) || 
+             (this.userSites!=null &&
+              java.util.Arrays.equals(this.userSites, other.getUserSites())));
         __equalsCalc = null;
         return _equals;
     }
@@ -71,8 +71,16 @@ public class AuthenticationResponse  extends com.amdocs.ch.publicapi.service.Pub
         }
         __hashCodeCalc = true;
         int _hashCode = super.hashCode();
-        if (getAuthenticationDetails() != null) {
-            _hashCode += getAuthenticationDetails().hashCode();
+        if (getUserSites() != null) {
+            for (int i=0;
+                 i<java.lang.reflect.Array.getLength(getUserSites());
+                 i++) {
+                java.lang.Object obj = java.lang.reflect.Array.get(getUserSites(), i);
+                if (obj != null &&
+                    !obj.getClass().isArray()) {
+                    _hashCode += obj.hashCode();
+                }
+            }
         }
         __hashCodeCalc = false;
         return _hashCode;
@@ -80,16 +88,17 @@ public class AuthenticationResponse  extends com.amdocs.ch.publicapi.service.Pub
 
     // Type metadata
     private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(AuthenticationResponse.class, true);
+        new org.apache.axis.description.TypeDesc(AllSiteUsersResponse.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://service.publicapi.ch.amdocs.com/", "authenticationResponse"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "allSiteUsersResponse"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("authenticationDetails");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "authenticationDetails"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://service.publicapi.ch.amdocs.com/", "authDetails"));
+        elemField.setFieldName("userSites");
+        elemField.setXmlName(new javax.xml.namespace.QName("", "userSites"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "userSiteFullInfo"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
+        elemField.setItemQName(new javax.xml.namespace.QName("", "userSite"));
         typeDesc.addFieldDesc(elemField);
     }
 

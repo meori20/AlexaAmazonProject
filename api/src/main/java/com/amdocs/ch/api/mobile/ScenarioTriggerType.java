@@ -27,6 +27,7 @@ public class ScenarioTriggerType implements java.io.Serializable {
     public static final java.lang.String _DOOR_LOCK_CLOSED = "DOOR_LOCK_CLOSED";
     public static final java.lang.String _LOCATION_ENTER = "LOCATION_ENTER";
     public static final java.lang.String _LOCATION_EXIT = "LOCATION_EXIT";
+    public static final java.lang.String _NFC = "NFC";
     public static final java.lang.String _MANUAL = "MANUAL";
     public static final ScenarioTriggerType TIME = new ScenarioTriggerType(_TIME);
     public static final ScenarioTriggerType ARMED = new ScenarioTriggerType(_ARMED);
@@ -38,6 +39,7 @@ public class ScenarioTriggerType implements java.io.Serializable {
     public static final ScenarioTriggerType DOOR_LOCK_CLOSED = new ScenarioTriggerType(_DOOR_LOCK_CLOSED);
     public static final ScenarioTriggerType LOCATION_ENTER = new ScenarioTriggerType(_LOCATION_ENTER);
     public static final ScenarioTriggerType LOCATION_EXIT = new ScenarioTriggerType(_LOCATION_EXIT);
+    public static final ScenarioTriggerType NFC = new ScenarioTriggerType(_NFC);
     public static final ScenarioTriggerType MANUAL = new ScenarioTriggerType(_MANUAL);
     public java.lang.String getValue() { return _value_;}
     public static ScenarioTriggerType fromValue(java.lang.String value)

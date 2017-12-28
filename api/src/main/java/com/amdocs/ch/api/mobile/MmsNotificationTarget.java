@@ -18,6 +18,7 @@ public class MmsNotificationTarget  extends com.amdocs.ch.api.mobile.PhoneNotifi
            com.amdocs.ch.api.mobile.NotificationCategory notificationCategory,
            java.lang.String title,
            com.amdocs.ch.api.mobile.Id userId,
+           com.amdocs.ch.api.mobile.Id userSiteId,
            java.lang.String phoneNumber) {
         super(
             media,
@@ -26,6 +27,7 @@ public class MmsNotificationTarget  extends com.amdocs.ch.api.mobile.PhoneNotifi
             notificationCategory,
             title,
             userId,
+            userSiteId,
             phoneNumber);
     }
 

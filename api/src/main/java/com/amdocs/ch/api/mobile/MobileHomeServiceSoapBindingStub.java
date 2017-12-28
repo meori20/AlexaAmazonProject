@@ -16,7 +16,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
     static org.apache.axis.description.OperationDesc [] _operations;
 
     static {
-        _operations = new org.apache.axis.description.OperationDesc[134];
+        _operations = new org.apache.axis.description.OperationDesc[142];
         _initOperationDesc1();
         _initOperationDesc2();
         _initOperationDesc3();
@@ -31,6 +31,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         _initOperationDesc12();
         _initOperationDesc13();
         _initOperationDesc14();
+        _initOperationDesc15();
     }
 
     private static void _initOperationDesc1(){
@@ -121,8 +122,8 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         _operations[6] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
-        oper.setName("assignDeviceUsername");
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "request"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "assignDeviceUsernameRequest"), com.amdocs.ch.api.mobile.AssignDeviceUsernameRequest.class, false, false);
+        oper.setName("removeNFCInfo");
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "request"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "nfcInfoRequest"), com.amdocs.ch.api.mobile.NfcInfoRequest.class, false, false);
         param.setOmittable(true);
         oper.addParameter(param);
         oper.setReturnType(new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "mobileHomeServiceResponse"));
@@ -133,8 +134,8 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         _operations[7] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
-        oper.setName("changeSecurityQuestions");
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "request"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "changeSecurityQuestionsRequest"), com.amdocs.ch.api.mobile.ChangeSecurityQuestionsRequest.class, false, false);
+        oper.setName("assignDeviceUsername");
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "request"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "assignDeviceUsernameRequest"), com.amdocs.ch.api.mobile.AssignDeviceUsernameRequest.class, false, false);
         param.setOmittable(true);
         oper.addParameter(param);
         oper.setReturnType(new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "mobileHomeServiceResponse"));
@@ -145,10 +146,9 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         _operations[8] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
-        oper.setName("startMotionCameraViewOnDemand");
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "gatewayID"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "long"), long.class, false, false);
-        oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "deviceID"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "long"), long.class, false, false);
+        oper.setName("changeSecurityQuestions");
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "request"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "changeSecurityQuestionsRequest"), com.amdocs.ch.api.mobile.ChangeSecurityQuestionsRequest.class, false, false);
+        param.setOmittable(true);
         oper.addParameter(param);
         oper.setReturnType(new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "mobileHomeServiceResponse"));
         oper.setReturnClass(com.amdocs.ch.api.mobile.MobileHomeServiceResponse.class);
@@ -163,6 +163,19 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         org.apache.axis.description.OperationDesc oper;
         org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
+        oper.setName("startMotionCameraViewOnDemand");
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "gatewayID"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "long"), long.class, false, false);
+        oper.addParameter(param);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "deviceID"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "long"), long.class, false, false);
+        oper.addParameter(param);
+        oper.setReturnType(new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "mobileHomeServiceResponse"));
+        oper.setReturnClass(com.amdocs.ch.api.mobile.MobileHomeServiceResponse.class);
+        oper.setReturnQName(new javax.xml.namespace.QName("", "response"));
+        oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
+        oper.setUse(org.apache.axis.constants.Use.LITERAL);
+        _operations[10] = oper;
+
+        oper = new org.apache.axis.description.OperationDesc();
         oper.setName("updateScenarioDetails");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "scenarioDetails"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "scenarioBaseDetails"), com.amdocs.ch.api.mobile.ScenarioBaseDetails.class, false, false);
         param.setOmittable(true);
@@ -172,7 +185,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "response"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[10] = oper;
+        _operations[11] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("resetPushMessageCounter");
@@ -184,7 +197,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "return"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[11] = oper;
+        _operations[12] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("startVideoStreaming");
@@ -198,7 +211,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "videoTranslationSession"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[12] = oper;
+        _operations[13] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("getMobileTokensByCustomerId");
@@ -209,7 +222,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "return"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[13] = oper;
+        _operations[14] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("getUserPermissions");
@@ -221,7 +234,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "return"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[14] = oper;
+        _operations[15] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("updateSecurityDeviceAdvancedSettings");
@@ -233,7 +246,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "response"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[15] = oper;
+        _operations[16] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("getAllCustomerUsers");
@@ -244,7 +257,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "response"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[16] = oper;
+        _operations[17] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("getLogHistoryDepth");
@@ -253,7 +266,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "return"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[17] = oper;
+        _operations[18] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("getAllGatewayScenarios");
@@ -261,17 +274,6 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.addParameter(param);
         oper.setReturnType(new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "gatewayScenariosResponse"));
         oper.setReturnClass(com.amdocs.ch.api.mobile.GatewayScenariosResponse.class);
-        oper.setReturnQName(new javax.xml.namespace.QName("", "response"));
-        oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
-        oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[18] = oper;
-
-        oper = new org.apache.axis.description.OperationDesc();
-        oper.setName("saveImageSnapshot");
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "deviceID"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "long"), long.class, false, false);
-        oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "mobileHomeServiceResponse"));
-        oper.setReturnClass(com.amdocs.ch.api.mobile.MobileHomeServiceResponse.class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "response"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
@@ -283,6 +285,17 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         org.apache.axis.description.OperationDesc oper;
         org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
+        oper.setName("saveImageSnapshot");
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "deviceID"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "long"), long.class, false, false);
+        oper.addParameter(param);
+        oper.setReturnType(new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "mobileHomeServiceResponse"));
+        oper.setReturnClass(com.amdocs.ch.api.mobile.MobileHomeServiceResponse.class);
+        oper.setReturnQName(new javax.xml.namespace.QName("", "response"));
+        oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
+        oper.setUse(org.apache.axis.constants.Use.LITERAL);
+        _operations[20] = oper;
+
+        oper = new org.apache.axis.description.OperationDesc();
         oper.setName("getSecurityDeviceAdvancedSettings");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "gatewayID"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "long"), long.class, false, false);
         oper.addParameter(param);
@@ -293,7 +306,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "response"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[20] = oper;
+        _operations[21] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("getNotificationCategoriesAndTargetTypes");
@@ -304,7 +317,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "return"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[21] = oper;
+        _operations[22] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("sendNotificationMobilePush");
@@ -325,7 +338,18 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "response"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[22] = oper;
+        _operations[23] = oper;
+
+        oper = new org.apache.axis.description.OperationDesc();
+        oper.setName("getNFCInfoList");
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "gatewayID"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "long"), long.class, false, false);
+        oper.addParameter(param);
+        oper.setReturnType(new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "nfcInfoListResponse"));
+        oper.setReturnClass(com.amdocs.ch.api.mobile.NfcInfoListResponse.class);
+        oper.setReturnQName(new javax.xml.namespace.QName("", "response"));
+        oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
+        oper.setUse(org.apache.axis.constants.Use.LITERAL);
+        _operations[24] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("updateCameraAdvancedSettings");
@@ -337,7 +361,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "response"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[23] = oper;
+        _operations[25] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("getDeviceAttributes");
@@ -348,7 +372,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "return"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[24] = oper;
+        _operations[26] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("getAllScenariosExecutionStatus");
@@ -359,7 +383,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "return"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[25] = oper;
+        _operations[27] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("setDeviceAttributes");
@@ -373,7 +397,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "return"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[26] = oper;
+        _operations[28] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("unregisterForPush");
@@ -385,8 +409,13 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "return"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[27] = oper;
+        _operations[29] = oper;
 
+    }
+
+    private static void _initOperationDesc4(){
+        org.apache.axis.description.OperationDesc oper;
+        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("setDeviceStatus");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "deviceID"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "long"), long.class, false, false);
@@ -399,7 +428,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "changeSucceeded"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[28] = oper;
+        _operations[30] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("getRecordedVideosCamerasNames");
@@ -410,13 +439,8 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "response"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[29] = oper;
+        _operations[31] = oper;
 
-    }
-
-    private static void _initOperationDesc4(){
-        org.apache.axis.description.OperationDesc oper;
-        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("getPushHistoryData");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "username"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
@@ -427,7 +451,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "response"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[30] = oper;
+        _operations[32] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("setSecuritySirensState");
@@ -439,7 +463,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "response"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[31] = oper;
+        _operations[33] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("getUserPreferencesByUserName");
@@ -451,7 +475,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "return"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[32] = oper;
+        _operations[34] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("setSecurityDeviceBypass");
@@ -463,7 +487,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "return"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[33] = oper;
+        _operations[35] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("getAllGatewayUsers");
@@ -474,7 +498,19 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "response"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[34] = oper;
+        _operations[36] = oper;
+
+        oper = new org.apache.axis.description.OperationDesc();
+        oper.setName("triggerNfcScenarios");
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "request"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "nfcInfoRequest"), com.amdocs.ch.api.mobile.NfcInfoRequest.class, false, false);
+        param.setOmittable(true);
+        oper.addParameter(param);
+        oper.setReturnType(new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "mobileHomeServiceResponse"));
+        oper.setReturnClass(com.amdocs.ch.api.mobile.MobileHomeServiceResponse.class);
+        oper.setReturnQName(new javax.xml.namespace.QName("", "response"));
+        oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
+        oper.setUse(org.apache.axis.constants.Use.LITERAL);
+        _operations[37] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("getGatewayScenario");
@@ -485,7 +521,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "response"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[35] = oper;
+        _operations[38] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("getDevicesByType");
@@ -499,8 +535,13 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "customerDevices"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[36] = oper;
+        _operations[39] = oper;
 
+    }
+
+    private static void _initOperationDesc5(){
+        org.apache.axis.description.OperationDesc oper;
+        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("getAllSecurityQuestions");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "locale"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
@@ -511,7 +552,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "response"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[37] = oper;
+        _operations[40] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("sendUpdateMobilePush");
@@ -520,7 +561,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "response"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[38] = oper;
+        _operations[41] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("getWPSStatus");
@@ -531,13 +572,8 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "response"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[39] = oper;
+        _operations[42] = oper;
 
-    }
-
-    private static void _initOperationDesc5(){
-        org.apache.axis.description.OperationDesc oper;
-        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("getCamerasWifiStatus");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "gatewayID"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "long"), long.class, false, false);
@@ -547,7 +583,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "response"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[40] = oper;
+        _operations[43] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("sendScenarioExecutionCommand");
@@ -563,7 +599,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "response"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[41] = oper;
+        _operations[44] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("getUIRelatedDevices");
@@ -575,7 +611,19 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "response"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[42] = oper;
+        _operations[45] = oper;
+
+        oper = new org.apache.axis.description.OperationDesc();
+        oper.setName("updateSite");
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "request"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "siteRequest"), com.amdocs.ch.api.mobile.SiteRequest.class, false, false);
+        param.setOmittable(true);
+        oper.addParameter(param);
+        oper.setReturnType(new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "mobileHomeServiceResponse"));
+        oper.setReturnClass(com.amdocs.ch.api.mobile.MobileHomeServiceResponse.class);
+        oper.setReturnQName(new javax.xml.namespace.QName("", "response"));
+        oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
+        oper.setUse(org.apache.axis.constants.Use.LITERAL);
+        _operations[46] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("getDevicesAttributes");
@@ -590,7 +638,19 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "return"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[43] = oper;
+        _operations[47] = oper;
+
+        oper = new org.apache.axis.description.OperationDesc();
+        oper.setName("addNFCInfo");
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "request"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "nfcInfoRequest"), com.amdocs.ch.api.mobile.NfcInfoRequest.class, false, false);
+        param.setOmittable(true);
+        oper.addParameter(param);
+        oper.setReturnType(new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "nfcInfoResponse"));
+        oper.setReturnClass(com.amdocs.ch.api.mobile.NfcInfoResponse.class);
+        oper.setReturnQName(new javax.xml.namespace.QName("", "response"));
+        oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
+        oper.setUse(org.apache.axis.constants.Use.LITERAL);
+        _operations[48] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("getNewDeviceAfterPairing");
@@ -603,8 +663,13 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "response"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[44] = oper;
+        _operations[49] = oper;
 
+    }
+
+    private static void _initOperationDesc6(){
+        org.apache.axis.description.OperationDesc oper;
+        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("resetEnergyInstantPower");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "gatewayID"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "long"), long.class, false, false);
@@ -617,7 +682,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "response"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[45] = oper;
+        _operations[50] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("stopImageSession");
@@ -628,7 +693,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "changeSucceeded"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[46] = oper;
+        _operations[51] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("stopMaintenanceMode");
@@ -639,7 +704,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "return"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[47] = oper;
+        _operations[52] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("updateScenarioStatus");
@@ -653,7 +718,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "response"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[48] = oper;
+        _operations[53] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("isAcceptedTermsAndConditions");
@@ -665,13 +730,8 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "return"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[49] = oper;
+        _operations[54] = oper;
 
-    }
-
-    private static void _initOperationDesc6(){
-        org.apache.axis.description.OperationDesc oper;
-        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("changePassword");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "request"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "changePasswordRequest"), com.amdocs.ch.api.mobile.ChangePasswordRequest.class, false, false);
@@ -682,7 +742,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "response"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[50] = oper;
+        _operations[55] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("getMobileTokensByUserId");
@@ -693,7 +753,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "return"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[51] = oper;
+        _operations[56] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("getGatewayPartitionArmingMode");
@@ -707,7 +767,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "return"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[52] = oper;
+        _operations[57] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("acceptTermsAndConditions");
@@ -719,7 +779,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "return"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[53] = oper;
+        _operations[58] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("getStreamingCamera");
@@ -730,7 +790,26 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "streamingCamera"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[54] = oper;
+        _operations[59] = oper;
+
+    }
+
+    private static void _initOperationDesc7(){
+        org.apache.axis.description.OperationDesc oper;
+        org.apache.axis.description.ParameterDesc param;
+        oper = new org.apache.axis.description.OperationDesc();
+        oper.setName("switchSite");
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "username"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
+        param.setOmittable(true);
+        oper.addParameter(param);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "siteID"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "long"), long.class, false, false);
+        oper.addParameter(param);
+        oper.setReturnType(new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "switchSiteMobileResponse"));
+        oper.setReturnClass(com.amdocs.ch.api.mobile.SwitchSiteMobileResponse.class);
+        oper.setReturnQName(new javax.xml.namespace.QName("", "response"));
+        oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
+        oper.setUse(org.apache.axis.constants.Use.LITERAL);
+        _operations[60] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("getImageSession");
@@ -741,7 +820,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "imageTranslationSession"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[55] = oper;
+        _operations[61] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("updateScenario");
@@ -753,7 +832,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "response"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[56] = oper;
+        _operations[62] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("getDeviceBySerial");
@@ -767,7 +846,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "customerDevice"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[57] = oper;
+        _operations[63] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("stopVideoStreaming");
@@ -781,7 +860,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "changeSucceeded"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[58] = oper;
+        _operations[64] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("getBadge");
@@ -793,13 +872,8 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "response"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[59] = oper;
+        _operations[65] = oper;
 
-    }
-
-    private static void _initOperationDesc7(){
-        org.apache.axis.description.OperationDesc oper;
-        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("sendCameraCommand");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "deviceID"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "long"), long.class, false, false);
@@ -812,18 +886,18 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "changeSucceeded"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[60] = oper;
+        _operations[66] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("getNFCInfo");
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "gatewayID"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "long"), long.class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "deviceID"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "long"), long.class, false, false);
         oper.addParameter(param);
         oper.setReturnType(new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "nfcInfoResponse"));
         oper.setReturnClass(com.amdocs.ch.api.mobile.NfcInfoResponse.class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "response"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[61] = oper;
+        _operations[67] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("getProductMetadataById");
@@ -834,7 +908,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "return"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[62] = oper;
+        _operations[68] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("getPushHistory");
@@ -848,8 +922,13 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "response"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[63] = oper;
+        _operations[69] = oper;
 
+    }
+
+    private static void _initOperationDesc8(){
+        org.apache.axis.description.OperationDesc oper;
+        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("startVideoPlayback");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "recordId"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "long"), long.class, false, false);
@@ -862,7 +941,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "playbackVideoSession"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[64] = oper;
+        _operations[70] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("getCameraAdvancedSettings");
@@ -875,7 +954,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "response"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[65] = oper;
+        _operations[71] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("setWPSMode");
@@ -889,7 +968,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "response"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[66] = oper;
+        _operations[72] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("getRecordedVideos");
@@ -901,12 +980,11 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "return"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[67] = oper;
+        _operations[73] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("changeSubUserStatus");
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "username"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
-        param.setOmittable(true);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "userSiteID"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "long"), long.class, false, false);
         oper.addParameter(param);
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "status"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "userStatus"), com.amdocs.ch.api.mobile.UserStatus.class, false, false);
         param.setOmittable(true);
@@ -916,7 +994,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "response"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[68] = oper;
+        _operations[74] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("getDefaultLanguage");
@@ -928,13 +1006,8 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "defaultUserLanguage"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[69] = oper;
+        _operations[75] = oper;
 
-    }
-
-    private static void _initOperationDesc8(){
-        org.apache.axis.description.OperationDesc oper;
-        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("getDevice");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "deviceID"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "long"), long.class, false, false);
@@ -944,7 +1017,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "customerDevice"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[70] = oper;
+        _operations[76] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("getVideoSessionInProgressByCameraId");
@@ -955,7 +1028,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "return"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[71] = oper;
+        _operations[77] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("getDevicesByProductGroup");
@@ -969,7 +1042,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "customerDevices"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[72] = oper;
+        _operations[78] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("setLogHistoryDepth");
@@ -978,8 +1051,13 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnType(org.apache.axis.encoding.XMLType.AXIS_VOID);
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[73] = oper;
+        _operations[79] = oper;
 
+    }
+
+    private static void _initOperationDesc9(){
+        org.apache.axis.description.OperationDesc oper;
+        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("getScenarioExecutionStatus");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "gatewayID"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "long"), long.class, false, false);
@@ -991,7 +1069,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "return"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[74] = oper;
+        _operations[80] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("getSingleValueMeasurements");
@@ -1003,7 +1081,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "response"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[75] = oper;
+        _operations[81] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("setGatewayPartitionArmingMode");
@@ -1017,7 +1095,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "return"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[76] = oper;
+        _operations[82] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("getAllAvailableWifiConnections");
@@ -1028,7 +1106,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "response"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[77] = oper;
+        _operations[83] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("setUrlEncryptor");
@@ -1038,7 +1116,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnType(org.apache.axis.encoding.XMLType.AXIS_VOID);
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[78] = oper;
+        _operations[84] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("isProfessionalSupportServiceActive");
@@ -1049,13 +1127,8 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "return"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[79] = oper;
+        _operations[85] = oper;
 
-    }
-
-    private static void _initOperationDesc9(){
-        org.apache.axis.description.OperationDesc oper;
-        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("deleteScenario");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "scenarioID"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "long"), long.class, false, false);
@@ -1065,7 +1138,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "response"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[80] = oper;
+        _operations[86] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("getUserVerticals");
@@ -1077,7 +1150,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "return"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[81] = oper;
+        _operations[87] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("getPairingProgressStatus");
@@ -1088,7 +1161,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "response"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[82] = oper;
+        _operations[88] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("getVideoSessionInProgress");
@@ -1100,8 +1173,13 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "return"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[83] = oper;
+        _operations[89] = oper;
 
+    }
+
+    private static void _initOperationDesc10(){
+        org.apache.axis.description.OperationDesc oper;
+        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("getMultiValueMeasurements");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "request"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "mobileHomeMeasurementsRequest"), com.amdocs.ch.api.mobile.MobileHomeMeasurementsRequest.class, false, false);
@@ -1112,7 +1190,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "response"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[84] = oper;
+        _operations[90] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("getCreditUsageHistory");
@@ -1130,7 +1208,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "creditSummary"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[85] = oper;
+        _operations[91] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("setGatewayNotificationTargets");
@@ -1142,7 +1220,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "return"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[86] = oper;
+        _operations[92] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("isValidNotificationTarget");
@@ -1154,7 +1232,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "return"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[87] = oper;
+        _operations[93] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("getMobileTokensByGatewayId");
@@ -1165,7 +1243,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "return"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[88] = oper;
+        _operations[94] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("setUserPersonalDetails");
@@ -1177,13 +1255,8 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "personalDetails"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[89] = oper;
+        _operations[95] = oper;
 
-    }
-
-    private static void _initOperationDesc10(){
-        org.apache.axis.description.OperationDesc oper;
-        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("getRecordedVideo");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "request"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "recordedVideoRequest"), com.amdocs.ch.api.mobile.RecordedVideoRequest.class, false, false);
@@ -1194,7 +1267,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "return"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[90] = oper;
+        _operations[96] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("startImage");
@@ -1205,7 +1278,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "imageTranslationSession"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[91] = oper;
+        _operations[97] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("approvePrivacyPolicy");
@@ -1217,7 +1290,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "response"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[92] = oper;
+        _operations[98] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("getUserPersonalDetails");
@@ -1229,7 +1302,23 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "personalDetails"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[93] = oper;
+        _operations[99] = oper;
+
+    }
+
+    private static void _initOperationDesc11(){
+        org.apache.axis.description.OperationDesc oper;
+        org.apache.axis.description.ParameterDesc param;
+        oper = new org.apache.axis.description.OperationDesc();
+        oper.setName("getAllSiteUsers");
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "siteID"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "long"), long.class, false, false);
+        oper.addParameter(param);
+        oper.setReturnType(new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "allSiteUsersResponse"));
+        oper.setReturnClass(com.amdocs.ch.api.mobile.AllSiteUsersResponse.class);
+        oper.setReturnQName(new javax.xml.namespace.QName("", "response"));
+        oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
+        oper.setUse(org.apache.axis.constants.Use.LITERAL);
+        _operations[100] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("getSecurityDevicesHavingAdvancedSettings");
@@ -1240,19 +1329,19 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "response"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[94] = oper;
+        _operations[101] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("createSubUser");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "request"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "subUserRequest"), com.amdocs.ch.api.mobile.SubUserRequest.class, false, false);
         param.setOmittable(true);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "userIdResponse"));
-        oper.setReturnClass(com.amdocs.ch.api.mobile.UserIdResponse.class);
+        oper.setReturnType(new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "userSiteResponse"));
+        oper.setReturnClass(com.amdocs.ch.api.mobile.UserSiteResponse.class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "response"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[95] = oper;
+        _operations[102] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("getViewOnDemandMode");
@@ -1263,7 +1352,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "return"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[96] = oper;
+        _operations[103] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("runZwaveControllerAdvancedCommand");
@@ -1277,7 +1366,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "response"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[97] = oper;
+        _operations[104] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("getMeasurementsStartTimestamp");
@@ -1289,7 +1378,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "response"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[98] = oper;
+        _operations[105] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("getAllCustomerVerticals");
@@ -1301,13 +1390,8 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "return"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[99] = oper;
+        _operations[106] = oper;
 
-    }
-
-    private static void _initOperationDesc11(){
-        org.apache.axis.description.OperationDesc oper;
-        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("setGatewayTimezone");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "gatewayID"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "long"), long.class, false, false);
@@ -1320,7 +1404,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "response"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[100] = oper;
+        _operations[107] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("triggerExternalScenarioEvent");
@@ -1333,7 +1417,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "response"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[101] = oper;
+        _operations[108] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("isInMaintenance");
@@ -1344,8 +1428,13 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "return"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[102] = oper;
+        _operations[109] = oper;
 
+    }
+
+    private static void _initOperationDesc12(){
+        org.apache.axis.description.OperationDesc oper;
+        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("getSecurityPanelUserCodes");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "gatewayID"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "long"), long.class, false, false);
@@ -1355,7 +1444,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "response"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[103] = oper;
+        _operations[110] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("getGatewayNotificationTargets");
@@ -1367,7 +1456,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "return"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[104] = oper;
+        _operations[111] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("getUIRelatedHomeDevices");
@@ -1379,7 +1468,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "response"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[105] = oper;
+        _operations[112] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("sendNotificationMobilePushMessage");
@@ -1402,7 +1491,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "response"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[106] = oper;
+        _operations[113] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("getMobileTokensByUserName");
@@ -1414,7 +1503,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "return"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[107] = oper;
+        _operations[114] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("refreshImageSession");
@@ -1426,7 +1515,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "imageTranslationSession"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[108] = oper;
+        _operations[115] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("startVideoRecording");
@@ -1440,13 +1529,8 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "recordId"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[109] = oper;
+        _operations[116] = oper;
 
-    }
-
-    private static void _initOperationDesc12(){
-        org.apache.axis.description.OperationDesc oper;
-        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("getGatewayConrollerInfo");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "gatewayID"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "long"), long.class, false, false);
@@ -1456,7 +1540,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "response"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[110] = oper;
+        _operations[117] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("updateUserPreferences");
@@ -1468,7 +1552,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "response"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[111] = oper;
+        _operations[118] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("startMaintenanceMode");
@@ -1479,8 +1563,13 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "return"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[112] = oper;
+        _operations[119] = oper;
 
+    }
+
+    private static void _initOperationDesc13(){
+        org.apache.axis.description.OperationDesc oper;
+        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("stopVideoRecording");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "deviceID"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "long"), long.class, false, false);
@@ -1496,7 +1585,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "changeSucceeded"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[113] = oper;
+        _operations[120] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("setGatewayArmingMode");
@@ -1510,7 +1599,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "changeSucceeded"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[114] = oper;
+        _operations[121] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("getDevices");
@@ -1521,7 +1610,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "customerDevice"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[115] = oper;
+        _operations[122] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("getGatewayId");
@@ -1533,7 +1622,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "gatewayID"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[116] = oper;
+        _operations[123] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("setInitialApprovals");
@@ -1545,7 +1634,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "response"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[117] = oper;
+        _operations[124] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("createScenario");
@@ -1557,7 +1646,19 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "response"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[118] = oper;
+        _operations[125] = oper;
+
+        oper = new org.apache.axis.description.OperationDesc();
+        oper.setName("getAllUserSites");
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "username"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
+        param.setOmittable(true);
+        oper.addParameter(param);
+        oper.setReturnType(new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "allUserSitesResponse"));
+        oper.setReturnClass(com.amdocs.ch.api.mobile.AllUserSitesResponse.class);
+        oper.setReturnQName(new javax.xml.namespace.QName("", "response"));
+        oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
+        oper.setUse(org.apache.axis.constants.Use.LITERAL);
+        _operations[126] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("getHistory");
@@ -1569,13 +1670,8 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "return"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[119] = oper;
+        _operations[127] = oper;
 
-    }
-
-    private static void _initOperationDesc13(){
-        org.apache.axis.description.OperationDesc oper;
-        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("getProductMetadataSet");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "request"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "productMetadataSetRequest"), com.amdocs.ch.api.mobile.ProductMetadataSetRequest.class, false, false);
@@ -1586,7 +1682,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "response"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[120] = oper;
+        _operations[128] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("getPairingMode");
@@ -1597,8 +1693,13 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "response"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[121] = oper;
+        _operations[129] = oper;
 
+    }
+
+    private static void _initOperationDesc14(){
+        org.apache.axis.description.OperationDesc oper;
+        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("getCreditCount");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "username"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
@@ -1609,31 +1710,44 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "creditCount"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[122] = oper;
+        _operations[130] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("updateSubUser");
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "request"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "subUserRequest"), com.amdocs.ch.api.mobile.SubUserRequest.class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "request"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "updateSubUserRequest"), com.amdocs.ch.api.mobile.UpdateSubUserRequest.class, false, false);
         param.setOmittable(true);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "mobileHomeServiceResponse"));
-        oper.setReturnClass(com.amdocs.ch.api.mobile.MobileHomeServiceResponse.class);
+        oper.setReturnType(new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "userSiteResponse"));
+        oper.setReturnClass(com.amdocs.ch.api.mobile.UserSiteResponse.class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "response"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[123] = oper;
+        _operations[131] = oper;
+
+        oper = new org.apache.axis.description.OperationDesc();
+        oper.setName("getSiteDetails");
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "siteID"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "long"), long.class, false, false);
+        oper.addParameter(param);
+        oper.setReturnType(new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "siteDetailsResponse"));
+        oper.setReturnClass(com.amdocs.ch.api.mobile.SiteDetailsResponse.class);
+        oper.setReturnQName(new javax.xml.namespace.QName("", "response"));
+        oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
+        oper.setUse(org.apache.axis.constants.Use.LITERAL);
+        _operations[132] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("sendRegistrationEmail");
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "username"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "email"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         param.setOmittable(true);
+        oper.addParameter(param);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "siteID"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "long"), long.class, false, false);
         oper.addParameter(param);
         oper.setReturnType(new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "mobileHomeServiceResponse"));
         oper.setReturnClass(com.amdocs.ch.api.mobile.MobileHomeServiceResponse.class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "response"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[124] = oper;
+        _operations[133] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("getImageSnapshot");
@@ -1644,7 +1758,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "response"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[125] = oper;
+        _operations[134] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("isSupportRequestExist");
@@ -1658,19 +1772,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "return"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[126] = oper;
-
-        oper = new org.apache.axis.description.OperationDesc();
-        oper.setName("setNFCInfo");
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "request"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "nfcInfoRequest"), com.amdocs.ch.api.mobile.NfcInfoRequest.class, false, false);
-        param.setOmittable(true);
-        oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "mobileHomeServiceResponse"));
-        oper.setReturnClass(com.amdocs.ch.api.mobile.MobileHomeServiceResponse.class);
-        oper.setReturnQName(new javax.xml.namespace.QName("", "response"));
-        oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
-        oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[127] = oper;
+        _operations[135] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("deleteVideoRecords");
@@ -1682,7 +1784,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "return"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[128] = oper;
+        _operations[136] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("getAvailableUserCodes");
@@ -1694,13 +1796,8 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "return"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[129] = oper;
+        _operations[137] = oper;
 
-    }
-
-    private static void _initOperationDesc14(){
-        org.apache.axis.description.OperationDesc oper;
-        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("getCustomerGatewayDetails");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "gatewayID"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "long"), long.class, false, false);
@@ -1710,7 +1807,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "gatewayDetails"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[130] = oper;
+        _operations[138] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("removeDevice");
@@ -1721,8 +1818,13 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "response"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[131] = oper;
+        _operations[139] = oper;
 
+    }
+
+    private static void _initOperationDesc15(){
+        org.apache.axis.description.OperationDesc oper;
+        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("configureSecondaryWifiSettings");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "request"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "secondaryWifiSettingsRequest"), com.amdocs.ch.api.mobile.SecondaryWifiSettingsRequest.class, false, false);
@@ -1733,7 +1835,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "response"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[132] = oper;
+        _operations[140] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("getEnergyInstantPower");
@@ -1745,7 +1847,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         oper.setReturnQName(new javax.xml.namespace.QName("", "response"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[133] = oper;
+        _operations[141] = oper;
 
     }
 
@@ -1846,6 +1948,13 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
+            qName = new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", ">>userSite>userPreferences>entry");
+            cachedSerQNames.add(qName);
+            cls = com.amdocs.ch.api.mobile.UserSiteUserPreferencesEntry.class;
+            cachedSerClasses.add(cls);
+            cachedSerFactories.add(beansf);
+            cachedDeserFactories.add(beandf);
+
             qName = new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", ">>videoRecord>filesStatus>entry");
             cachedSerQNames.add(qName);
             cls = com.amdocs.ch.api.mobile.VideoRecordFilesStatusEntry.class;
@@ -1877,6 +1986,24 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             cachedSerClasses.add(cls);
             qName = new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "scenarioExecutionStatusDetail");
             qName2 = new javax.xml.namespace.QName("", "scenarioStatus");
+            cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
+            cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
+
+            qName = new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", ">allSiteUsersResponse>userSites");
+            cachedSerQNames.add(qName);
+            cls = com.amdocs.ch.api.mobile.UserSiteFullInfo[].class;
+            cachedSerClasses.add(cls);
+            qName = new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "userSiteFullInfo");
+            qName2 = new javax.xml.namespace.QName("", "userSite");
+            cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
+            cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
+
+            qName = new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", ">allUserSitesResponse>userSites");
+            cachedSerQNames.add(qName);
+            cls = com.amdocs.ch.api.mobile.UserSite[].class;
+            cachedSerClasses.add(cls);
+            qName = new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "userSite");
+            qName2 = new javax.xml.namespace.QName("", "userSite");
             cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
             cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
 
@@ -2222,12 +2349,39 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
             cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
 
+            qName = new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", ">updateSubUserRequest>permissionsList");
+            cachedSerQNames.add(qName);
+            cls = com.amdocs.ch.api.mobile.CustomerPermissions[].class;
+            cachedSerClasses.add(cls);
+            qName = new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "customerPermissions");
+            qName2 = new javax.xml.namespace.QName("", "permission");
+            cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
+            cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
+
+            qName = new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", ">updateSubUserRequest>targets");
+            cachedSerQNames.add(qName);
+            cls = com.amdocs.ch.api.mobile.NotificationTarget[].class;
+            cachedSerClasses.add(cls);
+            qName = new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "notificationTarget");
+            qName2 = new javax.xml.namespace.QName("", "target");
+            cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
+            cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
+
             qName = new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", ">userPermissionsResponse>permissionsList");
             cachedSerQNames.add(qName);
             cls = com.amdocs.ch.api.mobile.CustomerPermissions[].class;
             cachedSerClasses.add(cls);
             qName = new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "customerPermissions");
             qName2 = new javax.xml.namespace.QName("", "permission");
+            cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
+            cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
+
+            qName = new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", ">userPersonalDetails>otherUserSites");
+            cachedSerQNames.add(qName);
+            cls = com.amdocs.ch.api.mobile.UserSite[].class;
+            cachedSerClasses.add(cls);
+            qName = new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "userSite");
+            qName2 = new javax.xml.namespace.QName("", "userSite");
             cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
             cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
 
@@ -2276,6 +2430,24 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
             cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
 
+            qName = new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", ">userSite>userPreferences");
+            cachedSerQNames.add(qName);
+            cls = com.amdocs.ch.api.mobile.UserSiteUserPreferencesEntry[].class;
+            cachedSerClasses.add(cls);
+            qName = new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", ">>userSite>userPreferences>entry");
+            qName2 = new javax.xml.namespace.QName("", "entry");
+            cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
+            cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
+
+            qName = new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", ">userSiteFullInfo>notificationTargets");
+            cachedSerQNames.add(qName);
+            cls = com.amdocs.ch.api.mobile.NotificationTarget[].class;
+            cachedSerClasses.add(cls);
+            qName = new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "notificationTarget");
+            qName2 = new javax.xml.namespace.QName("", "target");
+            cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
+            cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
+
             qName = new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", ">verticalDevices>verticalDashboardDevices");
             cachedSerQNames.add(qName);
             cls = com.amdocs.ch.api.mobile.BaseDashboardDevices[].class;
@@ -2308,6 +2480,13 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
+            qName = new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "address");
+            cachedSerQNames.add(qName);
+            cls = com.amdocs.ch.api.mobile.Address.class;
+            cachedSerClasses.add(cls);
+            cachedSerFactories.add(beansf);
+            cachedDeserFactories.add(beandf);
+
             qName = new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "allAvailableWifiDetailsResponse");
             cachedSerQNames.add(qName);
             cls = com.amdocs.ch.api.mobile.AllAvailableWifiDetailsResponse.class;
@@ -2329,6 +2508,20 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
+            qName = new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "allSiteUsersResponse");
+            cachedSerQNames.add(qName);
+            cls = com.amdocs.ch.api.mobile.AllSiteUsersResponse.class;
+            cachedSerClasses.add(cls);
+            cachedSerFactories.add(beansf);
+            cachedDeserFactories.add(beandf);
+
+            qName = new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "allUserSitesResponse");
+            cachedSerQNames.add(qName);
+            cls = com.amdocs.ch.api.mobile.AllUserSitesResponse.class;
+            cachedSerClasses.add(cls);
+            cachedSerFactories.add(beansf);
+            cachedDeserFactories.add(beandf);
+
             qName = new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "armingPartition");
             cachedSerQNames.add(qName);
             cls = com.amdocs.ch.api.mobile.ArmingPartition.class;
@@ -2346,6 +2539,13 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             qName = new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "audioFile");
             cachedSerQNames.add(qName);
             cls = com.amdocs.ch.api.mobile.AudioFile.class;
+            cachedSerClasses.add(cls);
+            cachedSerFactories.add(beansf);
+            cachedDeserFactories.add(beandf);
+
+            qName = new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "authDetails");
+            cachedSerQNames.add(qName);
+            cls = com.amdocs.ch.api.mobile.AuthDetails.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
@@ -2511,6 +2711,21 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
+    }
+    private void addBindings1() {
+            java.lang.Class cls;
+            javax.xml.namespace.QName qName;
+            javax.xml.namespace.QName qName2;
+            java.lang.Class beansf = org.apache.axis.encoding.ser.BeanSerializerFactory.class;
+            java.lang.Class beandf = org.apache.axis.encoding.ser.BeanDeserializerFactory.class;
+            java.lang.Class enumsf = org.apache.axis.encoding.ser.EnumSerializerFactory.class;
+            java.lang.Class enumdf = org.apache.axis.encoding.ser.EnumDeserializerFactory.class;
+            java.lang.Class arraysf = org.apache.axis.encoding.ser.ArraySerializerFactory.class;
+            java.lang.Class arraydf = org.apache.axis.encoding.ser.ArrayDeserializerFactory.class;
+            java.lang.Class simplesf = org.apache.axis.encoding.ser.SimpleSerializerFactory.class;
+            java.lang.Class simpledf = org.apache.axis.encoding.ser.SimpleDeserializerFactory.class;
+            java.lang.Class simplelistsf = org.apache.axis.encoding.ser.SimpleListSerializerFactory.class;
+            java.lang.Class simplelistdf = org.apache.axis.encoding.ser.SimpleListDeserializerFactory.class;
             qName = new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "customerPermissions");
             cachedSerQNames.add(qName);
             cls = com.amdocs.ch.api.mobile.CustomerPermissions.class;
@@ -2595,21 +2810,6 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-    }
-    private void addBindings1() {
-            java.lang.Class cls;
-            javax.xml.namespace.QName qName;
-            javax.xml.namespace.QName qName2;
-            java.lang.Class beansf = org.apache.axis.encoding.ser.BeanSerializerFactory.class;
-            java.lang.Class beandf = org.apache.axis.encoding.ser.BeanDeserializerFactory.class;
-            java.lang.Class enumsf = org.apache.axis.encoding.ser.EnumSerializerFactory.class;
-            java.lang.Class enumdf = org.apache.axis.encoding.ser.EnumDeserializerFactory.class;
-            java.lang.Class arraysf = org.apache.axis.encoding.ser.ArraySerializerFactory.class;
-            java.lang.Class arraydf = org.apache.axis.encoding.ser.ArrayDeserializerFactory.class;
-            java.lang.Class simplesf = org.apache.axis.encoding.ser.SimpleSerializerFactory.class;
-            java.lang.Class simpledf = org.apache.axis.encoding.ser.SimpleDeserializerFactory.class;
-            java.lang.Class simplelistsf = org.apache.axis.encoding.ser.SimpleListSerializerFactory.class;
-            java.lang.Class simplelistdf = org.apache.axis.encoding.ser.SimpleListDeserializerFactory.class;
             qName = new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "devicesAttributesResponse");
             cachedSerQNames.add(qName);
             cls = com.amdocs.ch.api.mobile.DevicesAttributesResponse.class;
@@ -3009,6 +3209,13 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
+            qName = new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "mobileToken");
+            cachedSerQNames.add(qName);
+            cls = com.amdocs.ch.api.mobile.MobileToken.class;
+            cachedSerClasses.add(cls);
+            cachedSerFactories.add(beansf);
+            cachedDeserFactories.add(beandf);
+
             qName = new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "mobileTokenUserIdResponse");
             cachedSerQNames.add(qName);
             cls = com.amdocs.ch.api.mobile.MobileTokenUserIdResponse.class;
@@ -3047,6 +3254,13 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             qName = new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "nfcInfo");
             cachedSerQNames.add(qName);
             cls = com.amdocs.ch.api.mobile.NfcInfo.class;
+            cachedSerClasses.add(cls);
+            cachedSerFactories.add(beansf);
+            cachedDeserFactories.add(beandf);
+
+            qName = new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "nfcInfoListResponse");
+            cachedSerQNames.add(qName);
+            cls = com.amdocs.ch.api.mobile.NfcInfoListResponse.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
@@ -3212,6 +3426,21 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             cachedSerFactories.add(enumsf);
             cachedDeserFactories.add(enumdf);
 
+    }
+    private void addBindings2() {
+            java.lang.Class cls;
+            javax.xml.namespace.QName qName;
+            javax.xml.namespace.QName qName2;
+            java.lang.Class beansf = org.apache.axis.encoding.ser.BeanSerializerFactory.class;
+            java.lang.Class beandf = org.apache.axis.encoding.ser.BeanDeserializerFactory.class;
+            java.lang.Class enumsf = org.apache.axis.encoding.ser.EnumSerializerFactory.class;
+            java.lang.Class enumdf = org.apache.axis.encoding.ser.EnumDeserializerFactory.class;
+            java.lang.Class arraysf = org.apache.axis.encoding.ser.ArraySerializerFactory.class;
+            java.lang.Class arraydf = org.apache.axis.encoding.ser.ArrayDeserializerFactory.class;
+            java.lang.Class simplesf = org.apache.axis.encoding.ser.SimpleSerializerFactory.class;
+            java.lang.Class simpledf = org.apache.axis.encoding.ser.SimpleDeserializerFactory.class;
+            java.lang.Class simplelistsf = org.apache.axis.encoding.ser.SimpleListSerializerFactory.class;
+            java.lang.Class simplelistdf = org.apache.axis.encoding.ser.SimpleListDeserializerFactory.class;
             qName = new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "productType");
             cachedSerQNames.add(qName);
             cls = com.amdocs.ch.api.mobile.ProductType.class;
@@ -3310,21 +3539,6 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-    }
-    private void addBindings2() {
-            java.lang.Class cls;
-            javax.xml.namespace.QName qName;
-            javax.xml.namespace.QName qName2;
-            java.lang.Class beansf = org.apache.axis.encoding.ser.BeanSerializerFactory.class;
-            java.lang.Class beandf = org.apache.axis.encoding.ser.BeanDeserializerFactory.class;
-            java.lang.Class enumsf = org.apache.axis.encoding.ser.EnumSerializerFactory.class;
-            java.lang.Class enumdf = org.apache.axis.encoding.ser.EnumDeserializerFactory.class;
-            java.lang.Class arraysf = org.apache.axis.encoding.ser.ArraySerializerFactory.class;
-            java.lang.Class arraydf = org.apache.axis.encoding.ser.ArrayDeserializerFactory.class;
-            java.lang.Class simplesf = org.apache.axis.encoding.ser.SimpleSerializerFactory.class;
-            java.lang.Class simpledf = org.apache.axis.encoding.ser.SimpleDeserializerFactory.class;
-            java.lang.Class simplelistsf = org.apache.axis.encoding.ser.SimpleListSerializerFactory.class;
-            java.lang.Class simplelistdf = org.apache.axis.encoding.ser.SimpleListDeserializerFactory.class;
             qName = new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "scenarioExecutionCommand");
             cachedSerQNames.add(qName);
             cls = com.amdocs.ch.api.mobile.ScenarioExecutionCommand.class;
@@ -3493,6 +3707,41 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
+            qName = new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "site");
+            cachedSerQNames.add(qName);
+            cls = com.amdocs.ch.api.mobile.Site.class;
+            cachedSerClasses.add(cls);
+            cachedSerFactories.add(beansf);
+            cachedDeserFactories.add(beandf);
+
+            qName = new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "siteDetails");
+            cachedSerQNames.add(qName);
+            cls = com.amdocs.ch.api.mobile.SiteDetails.class;
+            cachedSerClasses.add(cls);
+            cachedSerFactories.add(beansf);
+            cachedDeserFactories.add(beandf);
+
+            qName = new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "siteDetailsResponse");
+            cachedSerQNames.add(qName);
+            cls = com.amdocs.ch.api.mobile.SiteDetailsResponse.class;
+            cachedSerClasses.add(cls);
+            cachedSerFactories.add(beansf);
+            cachedDeserFactories.add(beandf);
+
+            qName = new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "siteGatewayDetails");
+            cachedSerQNames.add(qName);
+            cls = com.amdocs.ch.api.mobile.SiteGatewayDetails.class;
+            cachedSerClasses.add(cls);
+            cachedSerFactories.add(beansf);
+            cachedDeserFactories.add(beandf);
+
+            qName = new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "siteRequest");
+            cachedSerQNames.add(qName);
+            cls = com.amdocs.ch.api.mobile.SiteRequest.class;
+            cachedSerClasses.add(cls);
+            cachedSerFactories.add(beansf);
+            cachedDeserFactories.add(beandf);
+
             qName = new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "smsNotificationTarget");
             cachedSerQNames.add(qName);
             cls = com.amdocs.ch.api.mobile.SmsNotificationTarget.class;
@@ -3503,6 +3752,13 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             qName = new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "subUserRequest");
             cachedSerQNames.add(qName);
             cls = com.amdocs.ch.api.mobile.SubUserRequest.class;
+            cachedSerClasses.add(cls);
+            cachedSerFactories.add(beansf);
+            cachedDeserFactories.add(beandf);
+
+            qName = new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "switchSiteMobileResponse");
+            cachedSerQNames.add(qName);
+            cls = com.amdocs.ch.api.mobile.SwitchSiteMobileResponse.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
@@ -3535,9 +3791,23 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
+            qName = new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "updateSubUserRequest");
+            cachedSerQNames.add(qName);
+            cls = com.amdocs.ch.api.mobile.UpdateSubUserRequest.class;
+            cachedSerClasses.add(cls);
+            cachedSerFactories.add(beansf);
+            cachedDeserFactories.add(beandf);
+
             qName = new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "urlEncryptor");
             cachedSerQNames.add(qName);
             cls = com.amdocs.ch.api.mobile.UrlEncryptor.class;
+            cachedSerClasses.add(cls);
+            cachedSerFactories.add(beansf);
+            cachedDeserFactories.add(beandf);
+
+            qName = new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "user");
+            cachedSerQNames.add(qName);
+            cls = com.amdocs.ch.api.mobile.User.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
@@ -3562,13 +3832,6 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             cachedSerClasses.add(cls);
             cachedSerFactories.add(enumsf);
             cachedDeserFactories.add(enumdf);
-
-            qName = new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "userIdResponse");
-            cachedSerQNames.add(qName);
-            cls = com.amdocs.ch.api.mobile.UserIdResponse.class;
-            cachedSerClasses.add(cls);
-            cachedSerFactories.add(beansf);
-            cachedDeserFactories.add(beandf);
 
             qName = new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "userInfo");
             cachedSerQNames.add(qName);
@@ -3615,6 +3878,27 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             qName = new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "userPreferenceResponse");
             cachedSerQNames.add(qName);
             cls = com.amdocs.ch.api.mobile.UserPreferenceResponse.class;
+            cachedSerClasses.add(cls);
+            cachedSerFactories.add(beansf);
+            cachedDeserFactories.add(beandf);
+
+            qName = new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "userSite");
+            cachedSerQNames.add(qName);
+            cls = com.amdocs.ch.api.mobile.UserSite.class;
+            cachedSerClasses.add(cls);
+            cachedSerFactories.add(beansf);
+            cachedDeserFactories.add(beandf);
+
+            qName = new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "userSiteFullInfo");
+            cachedSerQNames.add(qName);
+            cls = com.amdocs.ch.api.mobile.UserSiteFullInfo.class;
+            cachedSerClasses.add(cls);
+            cachedSerFactories.add(beansf);
+            cachedDeserFactories.add(beandf);
+
+            qName = new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "userSiteResponse");
+            cachedSerQNames.add(qName);
+            cls = com.amdocs.ch.api.mobile.UserSiteResponse.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
@@ -4091,12 +4375,46 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
 }
     }
 
-    public com.amdocs.ch.api.mobile.MobileHomeServiceResponse assignDeviceUsername(com.amdocs.ch.api.mobile.AssignDeviceUsernameRequest request) throws java.rmi.RemoteException {
+    public com.amdocs.ch.api.mobile.MobileHomeServiceResponse removeNFCInfo(com.amdocs.ch.api.mobile.NfcInfoRequest request) throws java.rmi.RemoteException {
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
         _call.setOperation(_operations[7]);
+        _call.setUseSOAPAction(true);
+        _call.setSOAPActionURI("");
+        _call.setEncodingStyle(null);
+        _call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
+        _call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
+        _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
+        _call.setOperationName(new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "removeNFCInfo"));
+
+        setRequestHeaders(_call);
+        setAttachments(_call);
+ try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {request});
+
+        if (_resp instanceof java.rmi.RemoteException) {
+            throw (java.rmi.RemoteException)_resp;
+        }
+        else {
+            extractAttachments(_call);
+            try {
+                return (com.amdocs.ch.api.mobile.MobileHomeServiceResponse) _resp;
+            } catch (java.lang.Exception _exception) {
+                return (com.amdocs.ch.api.mobile.MobileHomeServiceResponse) org.apache.axis.utils.JavaUtils.convert(_resp, com.amdocs.ch.api.mobile.MobileHomeServiceResponse.class);
+            }
+        }
+  } catch (org.apache.axis.AxisFault axisFaultException) {
+  throw axisFaultException;
+}
+    }
+
+    public com.amdocs.ch.api.mobile.MobileHomeServiceResponse assignDeviceUsername(com.amdocs.ch.api.mobile.AssignDeviceUsernameRequest request) throws java.rmi.RemoteException {
+        if (super.cachedEndpoint == null) {
+            throw new org.apache.axis.NoEndPointException();
+        }
+        org.apache.axis.client.Call _call = createCall();
+        _call.setOperation(_operations[8]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -4130,7 +4448,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[8]);
+        _call.setOperation(_operations[9]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -4164,7 +4482,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[9]);
+        _call.setOperation(_operations[10]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -4198,7 +4516,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[10]);
+        _call.setOperation(_operations[11]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -4232,7 +4550,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[11]);
+        _call.setOperation(_operations[12]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -4266,7 +4584,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[12]);
+        _call.setOperation(_operations[13]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -4300,7 +4618,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[13]);
+        _call.setOperation(_operations[14]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -4334,7 +4652,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[14]);
+        _call.setOperation(_operations[15]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -4368,7 +4686,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[15]);
+        _call.setOperation(_operations[16]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -4402,7 +4720,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[16]);
+        _call.setOperation(_operations[17]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -4436,7 +4754,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[17]);
+        _call.setOperation(_operations[18]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -4470,7 +4788,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[18]);
+        _call.setOperation(_operations[19]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -4504,7 +4822,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[19]);
+        _call.setOperation(_operations[20]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -4538,7 +4856,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[20]);
+        _call.setOperation(_operations[21]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -4572,7 +4890,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[21]);
+        _call.setOperation(_operations[22]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -4606,7 +4924,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[22]);
+        _call.setOperation(_operations[23]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -4635,12 +4953,46 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
 }
     }
 
+    public com.amdocs.ch.api.mobile.NfcInfoListResponse getNFCInfoList(long gatewayID) throws java.rmi.RemoteException {
+        if (super.cachedEndpoint == null) {
+            throw new org.apache.axis.NoEndPointException();
+        }
+        org.apache.axis.client.Call _call = createCall();
+        _call.setOperation(_operations[24]);
+        _call.setUseSOAPAction(true);
+        _call.setSOAPActionURI("");
+        _call.setEncodingStyle(null);
+        _call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
+        _call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
+        _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
+        _call.setOperationName(new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "getNFCInfoList"));
+
+        setRequestHeaders(_call);
+        setAttachments(_call);
+ try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {new java.lang.Long(gatewayID)});
+
+        if (_resp instanceof java.rmi.RemoteException) {
+            throw (java.rmi.RemoteException)_resp;
+        }
+        else {
+            extractAttachments(_call);
+            try {
+                return (com.amdocs.ch.api.mobile.NfcInfoListResponse) _resp;
+            } catch (java.lang.Exception _exception) {
+                return (com.amdocs.ch.api.mobile.NfcInfoListResponse) org.apache.axis.utils.JavaUtils.convert(_resp, com.amdocs.ch.api.mobile.NfcInfoListResponse.class);
+            }
+        }
+  } catch (org.apache.axis.AxisFault axisFaultException) {
+  throw axisFaultException;
+}
+    }
+
     public com.amdocs.ch.api.mobile.MobileHomeServiceResponse updateCameraAdvancedSettings(com.amdocs.ch.api.mobile.CameraAdvancedSettingsRequest request) throws java.rmi.RemoteException {
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[23]);
+        _call.setOperation(_operations[25]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -4674,7 +5026,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[24]);
+        _call.setOperation(_operations[26]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -4708,7 +5060,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[25]);
+        _call.setOperation(_operations[27]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -4742,7 +5094,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[26]);
+        _call.setOperation(_operations[28]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -4776,7 +5128,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[27]);
+        _call.setOperation(_operations[29]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -4810,7 +5162,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[28]);
+        _call.setOperation(_operations[30]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -4844,7 +5196,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[29]);
+        _call.setOperation(_operations[31]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -4878,7 +5230,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[30]);
+        _call.setOperation(_operations[32]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -4912,7 +5264,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[31]);
+        _call.setOperation(_operations[33]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -4946,7 +5298,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[32]);
+        _call.setOperation(_operations[34]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -4980,7 +5332,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[33]);
+        _call.setOperation(_operations[35]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -5014,7 +5366,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[34]);
+        _call.setOperation(_operations[36]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -5043,12 +5395,46 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
 }
     }
 
+    public com.amdocs.ch.api.mobile.MobileHomeServiceResponse triggerNfcScenarios(com.amdocs.ch.api.mobile.NfcInfoRequest request) throws java.rmi.RemoteException {
+        if (super.cachedEndpoint == null) {
+            throw new org.apache.axis.NoEndPointException();
+        }
+        org.apache.axis.client.Call _call = createCall();
+        _call.setOperation(_operations[37]);
+        _call.setUseSOAPAction(true);
+        _call.setSOAPActionURI("");
+        _call.setEncodingStyle(null);
+        _call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
+        _call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
+        _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
+        _call.setOperationName(new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "triggerNfcScenarios"));
+
+        setRequestHeaders(_call);
+        setAttachments(_call);
+ try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {request});
+
+        if (_resp instanceof java.rmi.RemoteException) {
+            throw (java.rmi.RemoteException)_resp;
+        }
+        else {
+            extractAttachments(_call);
+            try {
+                return (com.amdocs.ch.api.mobile.MobileHomeServiceResponse) _resp;
+            } catch (java.lang.Exception _exception) {
+                return (com.amdocs.ch.api.mobile.MobileHomeServiceResponse) org.apache.axis.utils.JavaUtils.convert(_resp, com.amdocs.ch.api.mobile.MobileHomeServiceResponse.class);
+            }
+        }
+  } catch (org.apache.axis.AxisFault axisFaultException) {
+  throw axisFaultException;
+}
+    }
+
     public com.amdocs.ch.api.mobile.GatewayScenarioResponse getGatewayScenario(long scenarioID) throws java.rmi.RemoteException {
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[35]);
+        _call.setOperation(_operations[38]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -5082,7 +5468,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[36]);
+        _call.setOperation(_operations[39]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -5116,7 +5502,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[37]);
+        _call.setOperation(_operations[40]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -5150,7 +5536,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[38]);
+        _call.setOperation(_operations[41]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -5184,7 +5570,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[39]);
+        _call.setOperation(_operations[42]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -5218,7 +5604,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[40]);
+        _call.setOperation(_operations[43]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -5252,7 +5638,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[41]);
+        _call.setOperation(_operations[44]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -5286,7 +5672,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[42]);
+        _call.setOperation(_operations[45]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -5315,12 +5701,46 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
 }
     }
 
+    public com.amdocs.ch.api.mobile.MobileHomeServiceResponse updateSite(com.amdocs.ch.api.mobile.SiteRequest request) throws java.rmi.RemoteException {
+        if (super.cachedEndpoint == null) {
+            throw new org.apache.axis.NoEndPointException();
+        }
+        org.apache.axis.client.Call _call = createCall();
+        _call.setOperation(_operations[46]);
+        _call.setUseSOAPAction(true);
+        _call.setSOAPActionURI("");
+        _call.setEncodingStyle(null);
+        _call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
+        _call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
+        _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
+        _call.setOperationName(new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "updateSite"));
+
+        setRequestHeaders(_call);
+        setAttachments(_call);
+ try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {request});
+
+        if (_resp instanceof java.rmi.RemoteException) {
+            throw (java.rmi.RemoteException)_resp;
+        }
+        else {
+            extractAttachments(_call);
+            try {
+                return (com.amdocs.ch.api.mobile.MobileHomeServiceResponse) _resp;
+            } catch (java.lang.Exception _exception) {
+                return (com.amdocs.ch.api.mobile.MobileHomeServiceResponse) org.apache.axis.utils.JavaUtils.convert(_resp, com.amdocs.ch.api.mobile.MobileHomeServiceResponse.class);
+            }
+        }
+  } catch (org.apache.axis.AxisFault axisFaultException) {
+  throw axisFaultException;
+}
+    }
+
     public com.amdocs.ch.api.mobile.DevicesAttributesResponse getDevicesAttributes(long[] deviceID, java.lang.String[] attributeName) throws java.rmi.RemoteException {
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[43]);
+        _call.setOperation(_operations[47]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -5349,12 +5769,46 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
 }
     }
 
+    public com.amdocs.ch.api.mobile.NfcInfoResponse addNFCInfo(com.amdocs.ch.api.mobile.NfcInfoRequest request) throws java.rmi.RemoteException {
+        if (super.cachedEndpoint == null) {
+            throw new org.apache.axis.NoEndPointException();
+        }
+        org.apache.axis.client.Call _call = createCall();
+        _call.setOperation(_operations[48]);
+        _call.setUseSOAPAction(true);
+        _call.setSOAPActionURI("");
+        _call.setEncodingStyle(null);
+        _call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
+        _call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
+        _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
+        _call.setOperationName(new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "addNFCInfo"));
+
+        setRequestHeaders(_call);
+        setAttachments(_call);
+ try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {request});
+
+        if (_resp instanceof java.rmi.RemoteException) {
+            throw (java.rmi.RemoteException)_resp;
+        }
+        else {
+            extractAttachments(_call);
+            try {
+                return (com.amdocs.ch.api.mobile.NfcInfoResponse) _resp;
+            } catch (java.lang.Exception _exception) {
+                return (com.amdocs.ch.api.mobile.NfcInfoResponse) org.apache.axis.utils.JavaUtils.convert(_resp, com.amdocs.ch.api.mobile.NfcInfoResponse.class);
+            }
+        }
+  } catch (org.apache.axis.AxisFault axisFaultException) {
+  throw axisFaultException;
+}
+    }
+
     public com.amdocs.ch.api.mobile.HomeDeviceResponse getNewDeviceAfterPairing(long gatewayID, long productID) throws java.rmi.RemoteException {
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[44]);
+        _call.setOperation(_operations[49]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -5388,7 +5842,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[45]);
+        _call.setOperation(_operations[50]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -5422,7 +5876,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[46]);
+        _call.setOperation(_operations[51]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -5456,7 +5910,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[47]);
+        _call.setOperation(_operations[52]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -5490,7 +5944,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[48]);
+        _call.setOperation(_operations[53]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -5524,7 +5978,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[49]);
+        _call.setOperation(_operations[54]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -5558,7 +6012,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[50]);
+        _call.setOperation(_operations[55]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -5592,7 +6046,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[51]);
+        _call.setOperation(_operations[56]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -5626,7 +6080,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[52]);
+        _call.setOperation(_operations[57]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -5660,7 +6114,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[53]);
+        _call.setOperation(_operations[58]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -5694,7 +6148,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[54]);
+        _call.setOperation(_operations[59]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -5723,12 +6177,46 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
 }
     }
 
+    public com.amdocs.ch.api.mobile.SwitchSiteMobileResponse switchSite(java.lang.String username, long siteID) throws java.rmi.RemoteException {
+        if (super.cachedEndpoint == null) {
+            throw new org.apache.axis.NoEndPointException();
+        }
+        org.apache.axis.client.Call _call = createCall();
+        _call.setOperation(_operations[60]);
+        _call.setUseSOAPAction(true);
+        _call.setSOAPActionURI("");
+        _call.setEncodingStyle(null);
+        _call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
+        _call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
+        _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
+        _call.setOperationName(new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "switchSite"));
+
+        setRequestHeaders(_call);
+        setAttachments(_call);
+ try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {username, new java.lang.Long(siteID)});
+
+        if (_resp instanceof java.rmi.RemoteException) {
+            throw (java.rmi.RemoteException)_resp;
+        }
+        else {
+            extractAttachments(_call);
+            try {
+                return (com.amdocs.ch.api.mobile.SwitchSiteMobileResponse) _resp;
+            } catch (java.lang.Exception _exception) {
+                return (com.amdocs.ch.api.mobile.SwitchSiteMobileResponse) org.apache.axis.utils.JavaUtils.convert(_resp, com.amdocs.ch.api.mobile.SwitchSiteMobileResponse.class);
+            }
+        }
+  } catch (org.apache.axis.AxisFault axisFaultException) {
+  throw axisFaultException;
+}
+    }
+
     public com.amdocs.ch.api.mobile.ImageSession getImageSession(long deviceID) throws java.rmi.RemoteException {
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[55]);
+        _call.setOperation(_operations[61]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -5762,7 +6250,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[56]);
+        _call.setOperation(_operations[62]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -5796,7 +6284,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[57]);
+        _call.setOperation(_operations[63]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -5830,7 +6318,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[58]);
+        _call.setOperation(_operations[64]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -5864,7 +6352,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[59]);
+        _call.setOperation(_operations[65]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -5898,7 +6386,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[60]);
+        _call.setOperation(_operations[66]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -5927,12 +6415,12 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
 }
     }
 
-    public com.amdocs.ch.api.mobile.NfcInfoResponse getNFCInfo(long gatewayID) throws java.rmi.RemoteException {
+    public com.amdocs.ch.api.mobile.NfcInfoResponse getNFCInfo(long deviceID) throws java.rmi.RemoteException {
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[61]);
+        _call.setOperation(_operations[67]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -5943,7 +6431,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
 
         setRequestHeaders(_call);
         setAttachments(_call);
- try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {new java.lang.Long(gatewayID)});
+ try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {new java.lang.Long(deviceID)});
 
         if (_resp instanceof java.rmi.RemoteException) {
             throw (java.rmi.RemoteException)_resp;
@@ -5966,7 +6454,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[62]);
+        _call.setOperation(_operations[68]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -6000,7 +6488,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[63]);
+        _call.setOperation(_operations[69]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -6034,7 +6522,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[64]);
+        _call.setOperation(_operations[70]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -6068,7 +6556,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[65]);
+        _call.setOperation(_operations[71]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -6102,7 +6590,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[66]);
+        _call.setOperation(_operations[72]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -6136,7 +6624,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[67]);
+        _call.setOperation(_operations[73]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -6165,12 +6653,12 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
 }
     }
 
-    public com.amdocs.ch.api.mobile.MobileHomeServiceResponse changeSubUserStatus(java.lang.String username, com.amdocs.ch.api.mobile.UserStatus status) throws java.rmi.RemoteException {
+    public com.amdocs.ch.api.mobile.MobileHomeServiceResponse changeSubUserStatus(long userSiteID, com.amdocs.ch.api.mobile.UserStatus status) throws java.rmi.RemoteException {
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[68]);
+        _call.setOperation(_operations[74]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -6181,7 +6669,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
 
         setRequestHeaders(_call);
         setAttachments(_call);
- try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {username, status});
+ try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {new java.lang.Long(userSiteID), status});
 
         if (_resp instanceof java.rmi.RemoteException) {
             throw (java.rmi.RemoteException)_resp;
@@ -6204,7 +6692,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[69]);
+        _call.setOperation(_operations[75]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -6238,7 +6726,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[70]);
+        _call.setOperation(_operations[76]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -6272,7 +6760,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[71]);
+        _call.setOperation(_operations[77]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -6306,7 +6794,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[72]);
+        _call.setOperation(_operations[78]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -6340,7 +6828,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[73]);
+        _call.setOperation(_operations[79]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -6367,7 +6855,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[74]);
+        _call.setOperation(_operations[80]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -6401,7 +6889,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[75]);
+        _call.setOperation(_operations[81]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -6435,7 +6923,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[76]);
+        _call.setOperation(_operations[82]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -6469,7 +6957,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[77]);
+        _call.setOperation(_operations[83]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -6503,7 +6991,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[78]);
+        _call.setOperation(_operations[84]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -6530,7 +7018,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[79]);
+        _call.setOperation(_operations[85]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -6564,7 +7052,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[80]);
+        _call.setOperation(_operations[86]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -6598,7 +7086,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[81]);
+        _call.setOperation(_operations[87]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -6632,7 +7120,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[82]);
+        _call.setOperation(_operations[88]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -6666,7 +7154,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[83]);
+        _call.setOperation(_operations[89]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -6700,7 +7188,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[84]);
+        _call.setOperation(_operations[90]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -6734,7 +7222,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[85]);
+        _call.setOperation(_operations[91]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -6768,7 +7256,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[86]);
+        _call.setOperation(_operations[92]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -6802,7 +7290,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[87]);
+        _call.setOperation(_operations[93]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -6836,7 +7324,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[88]);
+        _call.setOperation(_operations[94]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -6870,7 +7358,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[89]);
+        _call.setOperation(_operations[95]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -6904,7 +7392,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[90]);
+        _call.setOperation(_operations[96]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -6938,7 +7426,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[91]);
+        _call.setOperation(_operations[97]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -6972,7 +7460,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[92]);
+        _call.setOperation(_operations[98]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -7006,7 +7494,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[93]);
+        _call.setOperation(_operations[99]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -7035,12 +7523,46 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
 }
     }
 
+    public com.amdocs.ch.api.mobile.AllSiteUsersResponse getAllSiteUsers(long siteID) throws java.rmi.RemoteException {
+        if (super.cachedEndpoint == null) {
+            throw new org.apache.axis.NoEndPointException();
+        }
+        org.apache.axis.client.Call _call = createCall();
+        _call.setOperation(_operations[100]);
+        _call.setUseSOAPAction(true);
+        _call.setSOAPActionURI("");
+        _call.setEncodingStyle(null);
+        _call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
+        _call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
+        _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
+        _call.setOperationName(new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "getAllSiteUsers"));
+
+        setRequestHeaders(_call);
+        setAttachments(_call);
+ try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {new java.lang.Long(siteID)});
+
+        if (_resp instanceof java.rmi.RemoteException) {
+            throw (java.rmi.RemoteException)_resp;
+        }
+        else {
+            extractAttachments(_call);
+            try {
+                return (com.amdocs.ch.api.mobile.AllSiteUsersResponse) _resp;
+            } catch (java.lang.Exception _exception) {
+                return (com.amdocs.ch.api.mobile.AllSiteUsersResponse) org.apache.axis.utils.JavaUtils.convert(_resp, com.amdocs.ch.api.mobile.AllSiteUsersResponse.class);
+            }
+        }
+  } catch (org.apache.axis.AxisFault axisFaultException) {
+  throw axisFaultException;
+}
+    }
+
     public com.amdocs.ch.api.mobile.SecurityDevicesHavingAdvancedSettingsResponse getSecurityDevicesHavingAdvancedSettings(long gatewayID) throws java.rmi.RemoteException {
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[94]);
+        _call.setOperation(_operations[101]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -7069,12 +7591,12 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
 }
     }
 
-    public com.amdocs.ch.api.mobile.UserIdResponse createSubUser(com.amdocs.ch.api.mobile.SubUserRequest request) throws java.rmi.RemoteException {
+    public com.amdocs.ch.api.mobile.UserSiteResponse createSubUser(com.amdocs.ch.api.mobile.SubUserRequest request) throws java.rmi.RemoteException {
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[95]);
+        _call.setOperation(_operations[102]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -7093,9 +7615,9 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         else {
             extractAttachments(_call);
             try {
-                return (com.amdocs.ch.api.mobile.UserIdResponse) _resp;
+                return (com.amdocs.ch.api.mobile.UserSiteResponse) _resp;
             } catch (java.lang.Exception _exception) {
-                return (com.amdocs.ch.api.mobile.UserIdResponse) org.apache.axis.utils.JavaUtils.convert(_resp, com.amdocs.ch.api.mobile.UserIdResponse.class);
+                return (com.amdocs.ch.api.mobile.UserSiteResponse) org.apache.axis.utils.JavaUtils.convert(_resp, com.amdocs.ch.api.mobile.UserSiteResponse.class);
             }
         }
   } catch (org.apache.axis.AxisFault axisFaultException) {
@@ -7108,7 +7630,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[96]);
+        _call.setOperation(_operations[103]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -7142,7 +7664,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[97]);
+        _call.setOperation(_operations[104]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -7176,7 +7698,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[98]);
+        _call.setOperation(_operations[105]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -7210,7 +7732,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[99]);
+        _call.setOperation(_operations[106]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -7244,7 +7766,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[100]);
+        _call.setOperation(_operations[107]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -7278,7 +7800,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[101]);
+        _call.setOperation(_operations[108]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -7312,7 +7834,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[102]);
+        _call.setOperation(_operations[109]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -7346,7 +7868,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[103]);
+        _call.setOperation(_operations[110]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -7380,7 +7902,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[104]);
+        _call.setOperation(_operations[111]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -7414,7 +7936,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[105]);
+        _call.setOperation(_operations[112]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -7448,7 +7970,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[106]);
+        _call.setOperation(_operations[113]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -7482,7 +8004,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[107]);
+        _call.setOperation(_operations[114]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -7516,7 +8038,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[108]);
+        _call.setOperation(_operations[115]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -7550,7 +8072,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[109]);
+        _call.setOperation(_operations[116]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -7584,7 +8106,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[110]);
+        _call.setOperation(_operations[117]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -7618,7 +8140,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[111]);
+        _call.setOperation(_operations[118]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -7652,7 +8174,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[112]);
+        _call.setOperation(_operations[119]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -7686,7 +8208,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[113]);
+        _call.setOperation(_operations[120]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -7720,7 +8242,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[114]);
+        _call.setOperation(_operations[121]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -7754,7 +8276,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[115]);
+        _call.setOperation(_operations[122]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -7788,7 +8310,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[116]);
+        _call.setOperation(_operations[123]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -7822,7 +8344,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[117]);
+        _call.setOperation(_operations[124]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -7856,7 +8378,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[118]);
+        _call.setOperation(_operations[125]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -7885,12 +8407,46 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
 }
     }
 
+    public com.amdocs.ch.api.mobile.AllUserSitesResponse getAllUserSites(java.lang.String username) throws java.rmi.RemoteException {
+        if (super.cachedEndpoint == null) {
+            throw new org.apache.axis.NoEndPointException();
+        }
+        org.apache.axis.client.Call _call = createCall();
+        _call.setOperation(_operations[126]);
+        _call.setUseSOAPAction(true);
+        _call.setSOAPActionURI("");
+        _call.setEncodingStyle(null);
+        _call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
+        _call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
+        _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
+        _call.setOperationName(new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "getAllUserSites"));
+
+        setRequestHeaders(_call);
+        setAttachments(_call);
+ try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {username});
+
+        if (_resp instanceof java.rmi.RemoteException) {
+            throw (java.rmi.RemoteException)_resp;
+        }
+        else {
+            extractAttachments(_call);
+            try {
+                return (com.amdocs.ch.api.mobile.AllUserSitesResponse) _resp;
+            } catch (java.lang.Exception _exception) {
+                return (com.amdocs.ch.api.mobile.AllUserSitesResponse) org.apache.axis.utils.JavaUtils.convert(_resp, com.amdocs.ch.api.mobile.AllUserSitesResponse.class);
+            }
+        }
+  } catch (org.apache.axis.AxisFault axisFaultException) {
+  throw axisFaultException;
+}
+    }
+
     public com.amdocs.ch.api.mobile.HistoryResponse getHistory(com.amdocs.ch.api.mobile.GetHistoryRequest request) throws java.rmi.RemoteException {
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[119]);
+        _call.setOperation(_operations[127]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -7924,7 +8480,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[120]);
+        _call.setOperation(_operations[128]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -7958,7 +8514,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[121]);
+        _call.setOperation(_operations[129]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -7992,7 +8548,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[122]);
+        _call.setOperation(_operations[130]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -8021,12 +8577,12 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
 }
     }
 
-    public com.amdocs.ch.api.mobile.MobileHomeServiceResponse updateSubUser(com.amdocs.ch.api.mobile.SubUserRequest request) throws java.rmi.RemoteException {
+    public com.amdocs.ch.api.mobile.UserSiteResponse updateSubUser(com.amdocs.ch.api.mobile.UpdateSubUserRequest request) throws java.rmi.RemoteException {
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[123]);
+        _call.setOperation(_operations[131]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -8045,9 +8601,9 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
         else {
             extractAttachments(_call);
             try {
-                return (com.amdocs.ch.api.mobile.MobileHomeServiceResponse) _resp;
+                return (com.amdocs.ch.api.mobile.UserSiteResponse) _resp;
             } catch (java.lang.Exception _exception) {
-                return (com.amdocs.ch.api.mobile.MobileHomeServiceResponse) org.apache.axis.utils.JavaUtils.convert(_resp, com.amdocs.ch.api.mobile.MobileHomeServiceResponse.class);
+                return (com.amdocs.ch.api.mobile.UserSiteResponse) org.apache.axis.utils.JavaUtils.convert(_resp, com.amdocs.ch.api.mobile.UserSiteResponse.class);
             }
         }
   } catch (org.apache.axis.AxisFault axisFaultException) {
@@ -8055,12 +8611,46 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
 }
     }
 
-    public com.amdocs.ch.api.mobile.MobileHomeServiceResponse sendRegistrationEmail(java.lang.String username) throws java.rmi.RemoteException {
+    public com.amdocs.ch.api.mobile.SiteDetailsResponse getSiteDetails(long siteID) throws java.rmi.RemoteException {
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[124]);
+        _call.setOperation(_operations[132]);
+        _call.setUseSOAPAction(true);
+        _call.setSOAPActionURI("");
+        _call.setEncodingStyle(null);
+        _call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
+        _call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
+        _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
+        _call.setOperationName(new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "getSiteDetails"));
+
+        setRequestHeaders(_call);
+        setAttachments(_call);
+ try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {new java.lang.Long(siteID)});
+
+        if (_resp instanceof java.rmi.RemoteException) {
+            throw (java.rmi.RemoteException)_resp;
+        }
+        else {
+            extractAttachments(_call);
+            try {
+                return (com.amdocs.ch.api.mobile.SiteDetailsResponse) _resp;
+            } catch (java.lang.Exception _exception) {
+                return (com.amdocs.ch.api.mobile.SiteDetailsResponse) org.apache.axis.utils.JavaUtils.convert(_resp, com.amdocs.ch.api.mobile.SiteDetailsResponse.class);
+            }
+        }
+  } catch (org.apache.axis.AxisFault axisFaultException) {
+  throw axisFaultException;
+}
+    }
+
+    public com.amdocs.ch.api.mobile.MobileHomeServiceResponse sendRegistrationEmail(java.lang.String email, long siteID) throws java.rmi.RemoteException {
+        if (super.cachedEndpoint == null) {
+            throw new org.apache.axis.NoEndPointException();
+        }
+        org.apache.axis.client.Call _call = createCall();
+        _call.setOperation(_operations[133]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -8071,7 +8661,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
 
         setRequestHeaders(_call);
         setAttachments(_call);
- try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {username});
+ try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {email, new java.lang.Long(siteID)});
 
         if (_resp instanceof java.rmi.RemoteException) {
             throw (java.rmi.RemoteException)_resp;
@@ -8094,7 +8684,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[125]);
+        _call.setOperation(_operations[134]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -8128,7 +8718,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[126]);
+        _call.setOperation(_operations[135]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -8157,46 +8747,12 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
 }
     }
 
-    public com.amdocs.ch.api.mobile.MobileHomeServiceResponse setNFCInfo(com.amdocs.ch.api.mobile.NfcInfoRequest request) throws java.rmi.RemoteException {
-        if (super.cachedEndpoint == null) {
-            throw new org.apache.axis.NoEndPointException();
-        }
-        org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[127]);
-        _call.setUseSOAPAction(true);
-        _call.setSOAPActionURI("");
-        _call.setEncodingStyle(null);
-        _call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
-        _call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
-        _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "setNFCInfo"));
-
-        setRequestHeaders(_call);
-        setAttachments(_call);
- try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {request});
-
-        if (_resp instanceof java.rmi.RemoteException) {
-            throw (java.rmi.RemoteException)_resp;
-        }
-        else {
-            extractAttachments(_call);
-            try {
-                return (com.amdocs.ch.api.mobile.MobileHomeServiceResponse) _resp;
-            } catch (java.lang.Exception _exception) {
-                return (com.amdocs.ch.api.mobile.MobileHomeServiceResponse) org.apache.axis.utils.JavaUtils.convert(_resp, com.amdocs.ch.api.mobile.MobileHomeServiceResponse.class);
-            }
-        }
-  } catch (org.apache.axis.AxisFault axisFaultException) {
-  throw axisFaultException;
-}
-    }
-
     public com.amdocs.ch.api.mobile.MobileHomeServiceResponse deleteVideoRecords(long[] recordedVideoId) throws java.rmi.RemoteException {
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[128]);
+        _call.setOperation(_operations[136]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -8230,7 +8786,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[129]);
+        _call.setOperation(_operations[137]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -8264,7 +8820,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[130]);
+        _call.setOperation(_operations[138]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -8298,7 +8854,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[131]);
+        _call.setOperation(_operations[139]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -8332,7 +8888,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[132]);
+        _call.setOperation(_operations[140]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -8366,7 +8922,7 @@ public class MobileHomeServiceSoapBindingStub extends org.apache.axis.client.Stu
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[133]);
+        _call.setOperation(_operations[141]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);

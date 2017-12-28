@@ -132,6 +132,7 @@ public class ProductType implements java.io.Serializable {
     public static final java.lang.String _general_parent_zwave = "general_parent_zwave";
     public static final java.lang.String _general_alarm_sensor_zwave = "general_alarm_sensor_zwave";
     public static final java.lang.String _general_alarm_v2_zwave = "general_alarm_v2_zwave";
+    public static final java.lang.String _nfc = "nfc";
     public static final ProductType ionics_box = new ProductType(_ionics_box);
     public static final ProductType ionics_cumulus_box = new ProductType(_ionics_cumulus_box);
     public static final ProductType sercomm_box = new ProductType(_sercomm_box);
@@ -247,6 +248,7 @@ public class ProductType implements java.io.Serializable {
     public static final ProductType general_parent_zwave = new ProductType(_general_parent_zwave);
     public static final ProductType general_alarm_sensor_zwave = new ProductType(_general_alarm_sensor_zwave);
     public static final ProductType general_alarm_v2_zwave = new ProductType(_general_alarm_v2_zwave);
+    public static final ProductType nfc = new ProductType(_nfc);
     public java.lang.String getValue() { return _value_;}
     public static ProductType fromValue(java.lang.String value)
           throws java.lang.IllegalArgumentException {

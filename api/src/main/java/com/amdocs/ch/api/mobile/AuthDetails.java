@@ -5,7 +5,7 @@
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package com.amdocs.ch.publicapi.service;
+package com.amdocs.ch.api.mobile;
 
 public class AuthDetails  implements java.io.Serializable {
     private java.lang.Boolean acceptTermsConditions;
@@ -18,7 +18,7 @@ public class AuthDetails  implements java.io.Serializable {
 
     private java.lang.String[] grantedAuthorities;
 
-    private com.amdocs.ch.publicapi.service.Site lastVisitedSite;
+    private com.amdocs.ch.api.mobile.Site lastVisitedSite;
 
     private java.lang.String securityToken;
 
@@ -39,7 +39,7 @@ public class AuthDetails  implements java.io.Serializable {
            java.lang.Boolean authorizeLocationSharing,
            java.lang.Boolean authorizeMarketingMessage,
            java.lang.String[] grantedAuthorities,
-           com.amdocs.ch.publicapi.service.Site lastVisitedSite,
+           com.amdocs.ch.api.mobile.Site lastVisitedSite,
            java.lang.String securityToken,
            java.lang.String siteMainUser,
            java.lang.String userName,
@@ -172,7 +172,7 @@ public class AuthDetails  implements java.io.Serializable {
      * 
      * @return lastVisitedSite
      */
-    public com.amdocs.ch.publicapi.service.Site getLastVisitedSite() {
+    public com.amdocs.ch.api.mobile.Site getLastVisitedSite() {
         return lastVisitedSite;
     }
 
@@ -182,7 +182,7 @@ public class AuthDetails  implements java.io.Serializable {
      * 
      * @param lastVisitedSite
      */
-    public void setLastVisitedSite(com.amdocs.ch.publicapi.service.Site lastVisitedSite) {
+    public void setLastVisitedSite(com.amdocs.ch.api.mobile.Site lastVisitedSite) {
         this.lastVisitedSite = lastVisitedSite;
     }
 
@@ -384,7 +384,7 @@ public class AuthDetails  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(AuthDetails.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://service.publicapi.ch.amdocs.com/", "authDetails"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "authDetails"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("acceptTermsConditions");
         elemField.setXmlName(new javax.xml.namespace.QName("", "acceptTermsConditions"));
@@ -424,7 +424,7 @@ public class AuthDetails  implements java.io.Serializable {
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("lastVisitedSite");
         elemField.setXmlName(new javax.xml.namespace.QName("", "lastVisitedSite"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://service.publicapi.ch.amdocs.com/", "site"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "site"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);

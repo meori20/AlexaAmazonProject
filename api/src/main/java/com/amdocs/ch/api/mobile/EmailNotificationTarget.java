@@ -22,6 +22,7 @@ public class EmailNotificationTarget  extends com.amdocs.ch.api.mobile.EventNoti
            com.amdocs.ch.api.mobile.NotificationCategory notificationCategory,
            java.lang.String title,
            com.amdocs.ch.api.mobile.Id userId,
+           com.amdocs.ch.api.mobile.Id userSiteId,
            java.lang.String email,
            java.lang.String subject) {
         super(
@@ -30,7 +31,8 @@ public class EmailNotificationTarget  extends com.amdocs.ch.api.mobile.EventNoti
             message,
             notificationCategory,
             title,
-            userId);
+            userId,
+            userSiteId);
         this.email = email;
         this.subject = subject;
     }

@@ -1,7 +1,5 @@
 package com.amdocs.ch.api.mobile;
 
-import com.amdocs.ch.api.mobile.MobileHomeService_ServiceLocator; 
-
 public class MobileHomeServiceProxy implements com.amdocs.ch.api.mobile.MobileHomeService_PortType {
   private String _endpoint = null;
   private com.amdocs.ch.api.mobile.MobileHomeService_PortType mobileHomeService_PortType = null;
@@ -86,6 +84,12 @@ public class MobileHomeServiceProxy implements com.amdocs.ch.api.mobile.MobileHo
     if (mobileHomeService_PortType == null)
       _initMobileHomeServiceProxy();
     return mobileHomeService_PortType.setPairingMode(request);
+  }
+  
+  public com.amdocs.ch.api.mobile.MobileHomeServiceResponse removeNFCInfo(com.amdocs.ch.api.mobile.NfcInfoRequest request) throws java.rmi.RemoteException{
+    if (mobileHomeService_PortType == null)
+      _initMobileHomeServiceProxy();
+    return mobileHomeService_PortType.removeNFCInfo(request);
   }
   
   public com.amdocs.ch.api.mobile.MobileHomeServiceResponse assignDeviceUsername(com.amdocs.ch.api.mobile.AssignDeviceUsernameRequest request) throws java.rmi.RemoteException{
@@ -184,6 +188,12 @@ public class MobileHomeServiceProxy implements com.amdocs.ch.api.mobile.MobileHo
     return mobileHomeService_PortType.sendNotificationMobilePush(title, text, productType, reason);
   }
   
+  public com.amdocs.ch.api.mobile.NfcInfoListResponse getNFCInfoList(long gatewayID) throws java.rmi.RemoteException{
+    if (mobileHomeService_PortType == null)
+      _initMobileHomeServiceProxy();
+    return mobileHomeService_PortType.getNFCInfoList(gatewayID);
+  }
+  
   public com.amdocs.ch.api.mobile.MobileHomeServiceResponse updateCameraAdvancedSettings(com.amdocs.ch.api.mobile.CameraAdvancedSettingsRequest request) throws java.rmi.RemoteException{
     if (mobileHomeService_PortType == null)
       _initMobileHomeServiceProxy();
@@ -256,6 +266,12 @@ public class MobileHomeServiceProxy implements com.amdocs.ch.api.mobile.MobileHo
     return mobileHomeService_PortType.getAllGatewayUsers(gatewayID);
   }
   
+  public com.amdocs.ch.api.mobile.MobileHomeServiceResponse triggerNfcScenarios(com.amdocs.ch.api.mobile.NfcInfoRequest request) throws java.rmi.RemoteException{
+    if (mobileHomeService_PortType == null)
+      _initMobileHomeServiceProxy();
+    return mobileHomeService_PortType.triggerNfcScenarios(request);
+  }
+  
   public com.amdocs.ch.api.mobile.GatewayScenarioResponse getGatewayScenario(long scenarioID) throws java.rmi.RemoteException{
     if (mobileHomeService_PortType == null)
       _initMobileHomeServiceProxy();
@@ -304,10 +320,22 @@ public class MobileHomeServiceProxy implements com.amdocs.ch.api.mobile.MobileHo
     return mobileHomeService_PortType.getUIRelatedDevices(request);
   }
   
+  public com.amdocs.ch.api.mobile.MobileHomeServiceResponse updateSite(com.amdocs.ch.api.mobile.SiteRequest request) throws java.rmi.RemoteException{
+    if (mobileHomeService_PortType == null)
+      _initMobileHomeServiceProxy();
+    return mobileHomeService_PortType.updateSite(request);
+  }
+  
   public com.amdocs.ch.api.mobile.DevicesAttributesResponse getDevicesAttributes(long[] deviceID, java.lang.String[] attributeName) throws java.rmi.RemoteException{
     if (mobileHomeService_PortType == null)
       _initMobileHomeServiceProxy();
     return mobileHomeService_PortType.getDevicesAttributes(deviceID, attributeName);
+  }
+  
+  public com.amdocs.ch.api.mobile.NfcInfoResponse addNFCInfo(com.amdocs.ch.api.mobile.NfcInfoRequest request) throws java.rmi.RemoteException{
+    if (mobileHomeService_PortType == null)
+      _initMobileHomeServiceProxy();
+    return mobileHomeService_PortType.addNFCInfo(request);
   }
   
   public com.amdocs.ch.api.mobile.HomeDeviceResponse getNewDeviceAfterPairing(long gatewayID, long productID) throws java.rmi.RemoteException{
@@ -376,6 +404,12 @@ public class MobileHomeServiceProxy implements com.amdocs.ch.api.mobile.MobileHo
     return mobileHomeService_PortType.getStreamingCamera(gatewayID);
   }
   
+  public com.amdocs.ch.api.mobile.SwitchSiteMobileResponse switchSite(java.lang.String username, long siteID) throws java.rmi.RemoteException{
+    if (mobileHomeService_PortType == null)
+      _initMobileHomeServiceProxy();
+    return mobileHomeService_PortType.switchSite(username, siteID);
+  }
+  
   public com.amdocs.ch.api.mobile.ImageSession getImageSession(long deviceID) throws java.rmi.RemoteException{
     if (mobileHomeService_PortType == null)
       _initMobileHomeServiceProxy();
@@ -412,10 +446,10 @@ public class MobileHomeServiceProxy implements com.amdocs.ch.api.mobile.MobileHo
     return mobileHomeService_PortType.sendCameraCommand(deviceID, cameraCommand);
   }
   
-  public com.amdocs.ch.api.mobile.NfcInfoResponse getNFCInfo(long gatewayID) throws java.rmi.RemoteException{
+  public com.amdocs.ch.api.mobile.NfcInfoResponse getNFCInfo(long deviceID) throws java.rmi.RemoteException{
     if (mobileHomeService_PortType == null)
       _initMobileHomeServiceProxy();
-    return mobileHomeService_PortType.getNFCInfo(gatewayID);
+    return mobileHomeService_PortType.getNFCInfo(deviceID);
   }
   
   public com.amdocs.ch.api.mobile.ProductMetadataResponse getProductMetadataById(long productID) throws java.rmi.RemoteException{
@@ -454,10 +488,10 @@ public class MobileHomeServiceProxy implements com.amdocs.ch.api.mobile.MobileHo
     return mobileHomeService_PortType.getRecordedVideos(request);
   }
   
-  public com.amdocs.ch.api.mobile.MobileHomeServiceResponse changeSubUserStatus(java.lang.String username, com.amdocs.ch.api.mobile.UserStatus status) throws java.rmi.RemoteException{
+  public com.amdocs.ch.api.mobile.MobileHomeServiceResponse changeSubUserStatus(long userSiteID, com.amdocs.ch.api.mobile.UserStatus status) throws java.rmi.RemoteException{
     if (mobileHomeService_PortType == null)
       _initMobileHomeServiceProxy();
-    return mobileHomeService_PortType.changeSubUserStatus(username, status);
+    return mobileHomeService_PortType.changeSubUserStatus(userSiteID, status);
   }
   
   public java.lang.String getDefaultLanguage(java.lang.String username) throws java.rmi.RemoteException{
@@ -610,13 +644,19 @@ public class MobileHomeServiceProxy implements com.amdocs.ch.api.mobile.MobileHo
     return mobileHomeService_PortType.getUserPersonalDetails(username);
   }
   
+  public com.amdocs.ch.api.mobile.AllSiteUsersResponse getAllSiteUsers(long siteID) throws java.rmi.RemoteException{
+    if (mobileHomeService_PortType == null)
+      _initMobileHomeServiceProxy();
+    return mobileHomeService_PortType.getAllSiteUsers(siteID);
+  }
+  
   public com.amdocs.ch.api.mobile.SecurityDevicesHavingAdvancedSettingsResponse getSecurityDevicesHavingAdvancedSettings(long gatewayID) throws java.rmi.RemoteException{
     if (mobileHomeService_PortType == null)
       _initMobileHomeServiceProxy();
     return mobileHomeService_PortType.getSecurityDevicesHavingAdvancedSettings(gatewayID);
   }
   
-  public com.amdocs.ch.api.mobile.UserIdResponse createSubUser(com.amdocs.ch.api.mobile.SubUserRequest request) throws java.rmi.RemoteException{
+  public com.amdocs.ch.api.mobile.UserSiteResponse createSubUser(com.amdocs.ch.api.mobile.SubUserRequest request) throws java.rmi.RemoteException{
     if (mobileHomeService_PortType == null)
       _initMobileHomeServiceProxy();
     return mobileHomeService_PortType.createSubUser(request);
@@ -760,6 +800,12 @@ public class MobileHomeServiceProxy implements com.amdocs.ch.api.mobile.MobileHo
     return mobileHomeService_PortType.createScenario(scenario);
   }
   
+  public com.amdocs.ch.api.mobile.AllUserSitesResponse getAllUserSites(java.lang.String username) throws java.rmi.RemoteException{
+    if (mobileHomeService_PortType == null)
+      _initMobileHomeServiceProxy();
+    return mobileHomeService_PortType.getAllUserSites(username);
+  }
+  
   public com.amdocs.ch.api.mobile.HistoryResponse getHistory(com.amdocs.ch.api.mobile.GetHistoryRequest request) throws java.rmi.RemoteException{
     if (mobileHomeService_PortType == null)
       _initMobileHomeServiceProxy();
@@ -784,16 +830,22 @@ public class MobileHomeServiceProxy implements com.amdocs.ch.api.mobile.MobileHo
     return mobileHomeService_PortType.getCreditCount(username);
   }
   
-  public com.amdocs.ch.api.mobile.MobileHomeServiceResponse updateSubUser(com.amdocs.ch.api.mobile.SubUserRequest request) throws java.rmi.RemoteException{
+  public com.amdocs.ch.api.mobile.UserSiteResponse updateSubUser(com.amdocs.ch.api.mobile.UpdateSubUserRequest request) throws java.rmi.RemoteException{
     if (mobileHomeService_PortType == null)
       _initMobileHomeServiceProxy();
     return mobileHomeService_PortType.updateSubUser(request);
   }
   
-  public com.amdocs.ch.api.mobile.MobileHomeServiceResponse sendRegistrationEmail(java.lang.String username) throws java.rmi.RemoteException{
+  public com.amdocs.ch.api.mobile.SiteDetailsResponse getSiteDetails(long siteID) throws java.rmi.RemoteException{
     if (mobileHomeService_PortType == null)
       _initMobileHomeServiceProxy();
-    return mobileHomeService_PortType.sendRegistrationEmail(username);
+    return mobileHomeService_PortType.getSiteDetails(siteID);
+  }
+  
+  public com.amdocs.ch.api.mobile.MobileHomeServiceResponse sendRegistrationEmail(java.lang.String email, long siteID) throws java.rmi.RemoteException{
+    if (mobileHomeService_PortType == null)
+      _initMobileHomeServiceProxy();
+    return mobileHomeService_PortType.sendRegistrationEmail(email, siteID);
   }
   
   public com.amdocs.ch.api.mobile.ImageSnapshotResponse getImageSnapshot(long deviceID) throws java.rmi.RemoteException{
@@ -806,12 +858,6 @@ public class MobileHomeServiceProxy implements com.amdocs.ch.api.mobile.MobileHo
     if (mobileHomeService_PortType == null)
       _initMobileHomeServiceProxy();
     return mobileHomeService_PortType.isSupportRequestExist(customerID, requestStatus);
-  }
-  
-  public com.amdocs.ch.api.mobile.MobileHomeServiceResponse setNFCInfo(com.amdocs.ch.api.mobile.NfcInfoRequest request) throws java.rmi.RemoteException{
-    if (mobileHomeService_PortType == null)
-      _initMobileHomeServiceProxy();
-    return mobileHomeService_PortType.setNFCInfo(request);
   }
   
   public com.amdocs.ch.api.mobile.MobileHomeServiceResponse deleteVideoRecords(long[] recordedVideoId) throws java.rmi.RemoteException{

@@ -1,40 +1,47 @@
 /**
- * SmsNotificationTarget.java
+ * Id.java
  *
  * This file was auto-generated from WSDL
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package com.amdocs.ch.api.mobile;
+package com.amdocs.ch.publicapi.service;
 
-public class SmsNotificationTarget  extends com.amdocs.ch.api.mobile.PhoneNotificationTarget  implements java.io.Serializable {
-    public SmsNotificationTarget() {
+public class Id  implements java.io.Serializable {
+    private java.lang.String id;
+
+    public Id() {
     }
 
-    public SmsNotificationTarget(
-           java.lang.String media,
-           com.amdocs.ch.api.mobile.EventNotificationTargetType targetType,
-           java.lang.String message,
-           com.amdocs.ch.api.mobile.NotificationCategory notificationCategory,
-           java.lang.String title,
-           com.amdocs.ch.api.mobile.Id userId,
-           com.amdocs.ch.api.mobile.Id userSiteId,
-           java.lang.String phoneNumber) {
-        super(
-            media,
-            targetType,
-            message,
-            notificationCategory,
-            title,
-            userId,
-            userSiteId,
-            phoneNumber);
+    public Id(
+           java.lang.String id) {
+           this.id = id;
+    }
+
+
+    /**
+     * Gets the id value for this Id.
+     * 
+     * @return id
+     */
+    public java.lang.String getId() {
+        return id;
+    }
+
+
+    /**
+     * Sets the id value for this Id.
+     * 
+     * @param id
+     */
+    public void setId(java.lang.String id) {
+        this.id = id;
     }
 
     private java.lang.Object __equalsCalc = null;
     public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof SmsNotificationTarget)) return false;
-        SmsNotificationTarget other = (SmsNotificationTarget) obj;
+        if (!(obj instanceof Id)) return false;
+        Id other = (Id) obj;
         if (obj == null) return false;
         if (this == obj) return true;
         if (__equalsCalc != null) {
@@ -42,7 +49,10 @@ public class SmsNotificationTarget  extends com.amdocs.ch.api.mobile.PhoneNotifi
         }
         __equalsCalc = obj;
         boolean _equals;
-        _equals = super.equals(obj);
+        _equals = true && 
+            ((this.id==null && other.getId()==null) || 
+             (this.id!=null &&
+              this.id.equals(other.getId())));
         __equalsCalc = null;
         return _equals;
     }
@@ -53,17 +63,27 @@ public class SmsNotificationTarget  extends com.amdocs.ch.api.mobile.PhoneNotifi
             return 0;
         }
         __hashCodeCalc = true;
-        int _hashCode = super.hashCode();
+        int _hashCode = 1;
+        if (getId() != null) {
+            _hashCode += getId().hashCode();
+        }
         __hashCodeCalc = false;
         return _hashCode;
     }
 
     // Type metadata
     private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(SmsNotificationTarget.class, true);
+        new org.apache.axis.description.TypeDesc(Id.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "smsNotificationTarget"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("http://service.publicapi.ch.amdocs.com/", "id"));
+        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("id");
+        elemField.setXmlName(new javax.xml.namespace.QName("", "id"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
+        elemField.setMinOccurs(0);
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
     }
 
     /**

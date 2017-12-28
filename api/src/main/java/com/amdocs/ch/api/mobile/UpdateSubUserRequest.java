@@ -1,5 +1,5 @@
 /**
- * SubUserRequest.java
+ * UpdateSubUserRequest.java
  *
  * This file was auto-generated from WSDL
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
@@ -7,7 +7,7 @@
 
 package com.amdocs.ch.api.mobile;
 
-public class SubUserRequest  implements java.io.Serializable {
+public class UpdateSubUserRequest  implements java.io.Serializable {
     private java.lang.String email;
 
     private java.lang.String firstName;
@@ -28,12 +28,14 @@ public class SubUserRequest  implements java.io.Serializable {
 
     private java.lang.Integer userCode;
 
+    private long userSiteId;
+
     private java.lang.String username;
 
-    public SubUserRequest() {
+    public UpdateSubUserRequest() {
     }
 
-    public SubUserRequest(
+    public UpdateSubUserRequest(
            java.lang.String email,
            java.lang.String firstName,
            long gatewayId,
@@ -44,6 +46,7 @@ public class SubUserRequest  implements java.io.Serializable {
            java.lang.String phone,
            long siteId,
            java.lang.Integer userCode,
+           long userSiteId,
            java.lang.String username) {
            this.email = email;
            this.firstName = firstName;
@@ -55,12 +58,13 @@ public class SubUserRequest  implements java.io.Serializable {
            this.phone = phone;
            this.siteId = siteId;
            this.userCode = userCode;
+           this.userSiteId = userSiteId;
            this.username = username;
     }
 
 
     /**
-     * Gets the email value for this SubUserRequest.
+     * Gets the email value for this UpdateSubUserRequest.
      * 
      * @return email
      */
@@ -70,7 +74,7 @@ public class SubUserRequest  implements java.io.Serializable {
 
 
     /**
-     * Sets the email value for this SubUserRequest.
+     * Sets the email value for this UpdateSubUserRequest.
      * 
      * @param email
      */
@@ -80,7 +84,7 @@ public class SubUserRequest  implements java.io.Serializable {
 
 
     /**
-     * Gets the firstName value for this SubUserRequest.
+     * Gets the firstName value for this UpdateSubUserRequest.
      * 
      * @return firstName
      */
@@ -90,7 +94,7 @@ public class SubUserRequest  implements java.io.Serializable {
 
 
     /**
-     * Sets the firstName value for this SubUserRequest.
+     * Sets the firstName value for this UpdateSubUserRequest.
      * 
      * @param firstName
      */
@@ -100,7 +104,7 @@ public class SubUserRequest  implements java.io.Serializable {
 
 
     /**
-     * Gets the gatewayId value for this SubUserRequest.
+     * Gets the gatewayId value for this UpdateSubUserRequest.
      * 
      * @return gatewayId
      */
@@ -110,7 +114,7 @@ public class SubUserRequest  implements java.io.Serializable {
 
 
     /**
-     * Sets the gatewayId value for this SubUserRequest.
+     * Sets the gatewayId value for this UpdateSubUserRequest.
      * 
      * @param gatewayId
      */
@@ -120,7 +124,7 @@ public class SubUserRequest  implements java.io.Serializable {
 
 
     /**
-     * Gets the lastName value for this SubUserRequest.
+     * Gets the lastName value for this UpdateSubUserRequest.
      * 
      * @return lastName
      */
@@ -130,7 +134,7 @@ public class SubUserRequest  implements java.io.Serializable {
 
 
     /**
-     * Sets the lastName value for this SubUserRequest.
+     * Sets the lastName value for this UpdateSubUserRequest.
      * 
      * @param lastName
      */
@@ -140,7 +144,7 @@ public class SubUserRequest  implements java.io.Serializable {
 
 
     /**
-     * Gets the targets value for this SubUserRequest.
+     * Gets the targets value for this UpdateSubUserRequest.
      * 
      * @return targets
      */
@@ -150,7 +154,7 @@ public class SubUserRequest  implements java.io.Serializable {
 
 
     /**
-     * Sets the targets value for this SubUserRequest.
+     * Sets the targets value for this UpdateSubUserRequest.
      * 
      * @param targets
      */
@@ -160,7 +164,7 @@ public class SubUserRequest  implements java.io.Serializable {
 
 
     /**
-     * Gets the PINcode value for this SubUserRequest.
+     * Gets the PINcode value for this UpdateSubUserRequest.
      * 
      * @return PINcode
      */
@@ -170,7 +174,7 @@ public class SubUserRequest  implements java.io.Serializable {
 
 
     /**
-     * Sets the PINcode value for this SubUserRequest.
+     * Sets the PINcode value for this UpdateSubUserRequest.
      * 
      * @param PINcode
      */
@@ -180,7 +184,7 @@ public class SubUserRequest  implements java.io.Serializable {
 
 
     /**
-     * Gets the permissionsList value for this SubUserRequest.
+     * Gets the permissionsList value for this UpdateSubUserRequest.
      * 
      * @return permissionsList
      */
@@ -190,7 +194,7 @@ public class SubUserRequest  implements java.io.Serializable {
 
 
     /**
-     * Sets the permissionsList value for this SubUserRequest.
+     * Sets the permissionsList value for this UpdateSubUserRequest.
      * 
      * @param permissionsList
      */
@@ -200,7 +204,7 @@ public class SubUserRequest  implements java.io.Serializable {
 
 
     /**
-     * Gets the phone value for this SubUserRequest.
+     * Gets the phone value for this UpdateSubUserRequest.
      * 
      * @return phone
      */
@@ -210,7 +214,7 @@ public class SubUserRequest  implements java.io.Serializable {
 
 
     /**
-     * Sets the phone value for this SubUserRequest.
+     * Sets the phone value for this UpdateSubUserRequest.
      * 
      * @param phone
      */
@@ -220,7 +224,7 @@ public class SubUserRequest  implements java.io.Serializable {
 
 
     /**
-     * Gets the siteId value for this SubUserRequest.
+     * Gets the siteId value for this UpdateSubUserRequest.
      * 
      * @return siteId
      */
@@ -230,7 +234,7 @@ public class SubUserRequest  implements java.io.Serializable {
 
 
     /**
-     * Sets the siteId value for this SubUserRequest.
+     * Sets the siteId value for this UpdateSubUserRequest.
      * 
      * @param siteId
      */
@@ -240,7 +244,7 @@ public class SubUserRequest  implements java.io.Serializable {
 
 
     /**
-     * Gets the userCode value for this SubUserRequest.
+     * Gets the userCode value for this UpdateSubUserRequest.
      * 
      * @return userCode
      */
@@ -250,7 +254,7 @@ public class SubUserRequest  implements java.io.Serializable {
 
 
     /**
-     * Sets the userCode value for this SubUserRequest.
+     * Sets the userCode value for this UpdateSubUserRequest.
      * 
      * @param userCode
      */
@@ -260,7 +264,27 @@ public class SubUserRequest  implements java.io.Serializable {
 
 
     /**
-     * Gets the username value for this SubUserRequest.
+     * Gets the userSiteId value for this UpdateSubUserRequest.
+     * 
+     * @return userSiteId
+     */
+    public long getUserSiteId() {
+        return userSiteId;
+    }
+
+
+    /**
+     * Sets the userSiteId value for this UpdateSubUserRequest.
+     * 
+     * @param userSiteId
+     */
+    public void setUserSiteId(long userSiteId) {
+        this.userSiteId = userSiteId;
+    }
+
+
+    /**
+     * Gets the username value for this UpdateSubUserRequest.
      * 
      * @return username
      */
@@ -270,7 +294,7 @@ public class SubUserRequest  implements java.io.Serializable {
 
 
     /**
-     * Sets the username value for this SubUserRequest.
+     * Sets the username value for this UpdateSubUserRequest.
      * 
      * @param username
      */
@@ -280,8 +304,8 @@ public class SubUserRequest  implements java.io.Serializable {
 
     private java.lang.Object __equalsCalc = null;
     public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof SubUserRequest)) return false;
-        SubUserRequest other = (SubUserRequest) obj;
+        if (!(obj instanceof UpdateSubUserRequest)) return false;
+        UpdateSubUserRequest other = (UpdateSubUserRequest) obj;
         if (obj == null) return false;
         if (this == obj) return true;
         if (__equalsCalc != null) {
@@ -316,6 +340,7 @@ public class SubUserRequest  implements java.io.Serializable {
             ((this.userCode==null && other.getUserCode()==null) || 
              (this.userCode!=null &&
               this.userCode.equals(other.getUserCode()))) &&
+            this.userSiteId == other.getUserSiteId() &&
             ((this.username==null && other.getUsername()==null) || 
              (this.username!=null &&
               this.username.equals(other.getUsername())));
@@ -372,6 +397,7 @@ public class SubUserRequest  implements java.io.Serializable {
         if (getUserCode() != null) {
             _hashCode += getUserCode().hashCode();
         }
+        _hashCode += new Long(getUserSiteId()).hashCode();
         if (getUsername() != null) {
             _hashCode += getUsername().hashCode();
         }
@@ -381,10 +407,10 @@ public class SubUserRequest  implements java.io.Serializable {
 
     // Type metadata
     private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(SubUserRequest.class, true);
+        new org.apache.axis.description.TypeDesc(UpdateSubUserRequest.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "subUserRequest"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "updateSubUserRequest"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("email");
         elemField.setXmlName(new javax.xml.namespace.QName("", "email"));
@@ -453,6 +479,12 @@ public class SubUserRequest  implements java.io.Serializable {
         elemField.setXmlName(new javax.xml.namespace.QName("", "userCode"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
         elemField.setMinOccurs(0);
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("userSiteId");
+        elemField.setXmlName(new javax.xml.namespace.QName("", "userSiteId"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "long"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();

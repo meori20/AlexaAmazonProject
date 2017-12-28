@@ -18,11 +18,13 @@ public class NotificationTarget  extends com.amdocs.ch.api.mobile.INotificationT
     public NotificationTarget(
            java.lang.String target,
            long userId,
+           long userSiteId,
            com.amdocs.ch.api.mobile.NotificationCategory notificationCategory,
            com.amdocs.ch.api.mobile.EventNotificationTargetType targetType) {
         super(
             target,
-            userId);
+            userId,
+            userSiteId);
         this.notificationCategory = notificationCategory;
         this.targetType = targetType;
     }

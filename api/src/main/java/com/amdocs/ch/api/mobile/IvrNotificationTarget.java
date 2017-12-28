@@ -22,6 +22,7 @@ public class IvrNotificationTarget  extends com.amdocs.ch.api.mobile.PhoneNotifi
            com.amdocs.ch.api.mobile.NotificationCategory notificationCategory,
            java.lang.String title,
            com.amdocs.ch.api.mobile.Id userId,
+           com.amdocs.ch.api.mobile.Id userSiteId,
            java.lang.String phoneNumber,
            java.lang.String ivrLanguage,
            int order) {
@@ -32,6 +33,7 @@ public class IvrNotificationTarget  extends com.amdocs.ch.api.mobile.PhoneNotifi
             notificationCategory,
             title,
             userId,
+            userSiteId,
             phoneNumber);
         this.ivrLanguage = ivrLanguage;
         this.order = order;

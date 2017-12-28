@@ -12,14 +12,18 @@ public abstract class INotificationTarget  implements java.io.Serializable {
 
     private long userId;
 
+    private long userSiteId;
+
     public INotificationTarget() {
     }
 
     public INotificationTarget(
            java.lang.String target,
-           long userId) {
+           long userId,
+           long userSiteId) {
            this.target = target;
            this.userId = userId;
+           this.userSiteId = userSiteId;
     }
 
 
@@ -62,6 +66,26 @@ public abstract class INotificationTarget  implements java.io.Serializable {
         this.userId = userId;
     }
 
+
+    /**
+     * Gets the userSiteId value for this INotificationTarget.
+     * 
+     * @return userSiteId
+     */
+    public long getUserSiteId() {
+        return userSiteId;
+    }
+
+
+    /**
+     * Sets the userSiteId value for this INotificationTarget.
+     * 
+     * @param userSiteId
+     */
+    public void setUserSiteId(long userSiteId) {
+        this.userSiteId = userSiteId;
+    }
+
     private java.lang.Object __equalsCalc = null;
     public synchronized boolean equals(java.lang.Object obj) {
         if (!(obj instanceof INotificationTarget)) return false;
@@ -77,7 +101,8 @@ public abstract class INotificationTarget  implements java.io.Serializable {
             ((this.target==null && other.getTarget()==null) || 
              (this.target!=null &&
               this.target.equals(other.getTarget()))) &&
-            this.userId == other.getUserId();
+            this.userId == other.getUserId() &&
+            this.userSiteId == other.getUserSiteId();
         __equalsCalc = null;
         return _equals;
     }
@@ -93,6 +118,7 @@ public abstract class INotificationTarget  implements java.io.Serializable {
             _hashCode += getTarget().hashCode();
         }
         _hashCode += new Long(getUserId()).hashCode();
+        _hashCode += new Long(getUserSiteId()).hashCode();
         __hashCodeCalc = false;
         return _hashCode;
     }
@@ -113,6 +139,12 @@ public abstract class INotificationTarget  implements java.io.Serializable {
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("userId");
         elemField.setXmlName(new javax.xml.namespace.QName("", "userId"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "long"));
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("userSiteId");
+        elemField.setXmlName(new javax.xml.namespace.QName("", "userSiteId"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "long"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);

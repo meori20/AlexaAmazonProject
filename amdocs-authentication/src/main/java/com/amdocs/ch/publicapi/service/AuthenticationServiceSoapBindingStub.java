@@ -83,9 +83,23 @@ public class AuthenticationServiceSoapBindingStub extends org.apache.axis.client
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
+            qName = new javax.xml.namespace.QName("http://service.publicapi.ch.amdocs.com/", "id");
+            cachedSerQNames.add(qName);
+            cls = com.amdocs.ch.publicapi.service.Id.class;
+            cachedSerClasses.add(cls);
+            cachedSerFactories.add(beansf);
+            cachedDeserFactories.add(beandf);
+
             qName = new javax.xml.namespace.QName("http://service.publicapi.ch.amdocs.com/", "publicAPIResponse");
             cachedSerQNames.add(qName);
             cls = com.amdocs.ch.publicapi.service.PublicAPIResponse.class;
+            cachedSerClasses.add(cls);
+            cachedSerFactories.add(beansf);
+            cachedDeserFactories.add(beandf);
+
+            qName = new javax.xml.namespace.QName("http://service.publicapi.ch.amdocs.com/", "site");
+            cachedSerQNames.add(qName);
+            cls = com.amdocs.ch.publicapi.service.Site.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);

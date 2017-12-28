@@ -1,5 +1,5 @@
 /**
- * PhoneNotificationTarget.java
+ * AllUserSitesResponse.java
  *
  * This file was auto-generated from WSDL
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
@@ -7,56 +7,48 @@
 
 package com.amdocs.ch.api.mobile;
 
-public abstract class PhoneNotificationTarget  extends com.amdocs.ch.api.mobile.EventNotificationTarget  implements java.io.Serializable {
-    private java.lang.String phoneNumber;
+public class AllUserSitesResponse  extends com.amdocs.ch.api.mobile.MobileHomeServiceResponse  implements java.io.Serializable {
+    private com.amdocs.ch.api.mobile.UserSite[] userSites;
 
-    public PhoneNotificationTarget() {
+    public AllUserSitesResponse() {
     }
 
-    public PhoneNotificationTarget(
-           java.lang.String media,
-           com.amdocs.ch.api.mobile.EventNotificationTargetType targetType,
-           java.lang.String message,
-           com.amdocs.ch.api.mobile.NotificationCategory notificationCategory,
-           java.lang.String title,
-           com.amdocs.ch.api.mobile.Id userId,
-           com.amdocs.ch.api.mobile.Id userSiteId,
-           java.lang.String phoneNumber) {
+    public AllUserSitesResponse(
+           boolean success,
+           java.lang.String faultCode,
+           java.lang.String faultDescription,
+           com.amdocs.ch.api.mobile.UserSite[] userSites) {
         super(
-            media,
-            targetType,
-            message,
-            notificationCategory,
-            title,
-            userId,
-            userSiteId);
-        this.phoneNumber = phoneNumber;
+            success,
+            faultCode,
+            faultDescription);
+        this.userSites = userSites;
     }
 
 
     /**
-     * Gets the phoneNumber value for this PhoneNotificationTarget.
+     * Gets the userSites value for this AllUserSitesResponse.
      * 
-     * @return phoneNumber
+     * @return userSites
      */
-    public java.lang.String getPhoneNumber() {
-        return phoneNumber;
+    public com.amdocs.ch.api.mobile.UserSite[] getUserSites() {
+        return userSites;
     }
 
 
     /**
-     * Sets the phoneNumber value for this PhoneNotificationTarget.
+     * Sets the userSites value for this AllUserSitesResponse.
      * 
-     * @param phoneNumber
+     * @param userSites
      */
-    public void setPhoneNumber(java.lang.String phoneNumber) {
-        this.phoneNumber = phoneNumber;
+    public void setUserSites(com.amdocs.ch.api.mobile.UserSite[] userSites) {
+        this.userSites = userSites;
     }
 
     private java.lang.Object __equalsCalc = null;
     public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof PhoneNotificationTarget)) return false;
-        PhoneNotificationTarget other = (PhoneNotificationTarget) obj;
+        if (!(obj instanceof AllUserSitesResponse)) return false;
+        AllUserSitesResponse other = (AllUserSitesResponse) obj;
         if (obj == null) return false;
         if (this == obj) return true;
         if (__equalsCalc != null) {
@@ -65,9 +57,9 @@ public abstract class PhoneNotificationTarget  extends com.amdocs.ch.api.mobile.
         __equalsCalc = obj;
         boolean _equals;
         _equals = super.equals(obj) && 
-            ((this.phoneNumber==null && other.getPhoneNumber()==null) || 
-             (this.phoneNumber!=null &&
-              this.phoneNumber.equals(other.getPhoneNumber())));
+            ((this.userSites==null && other.getUserSites()==null) || 
+             (this.userSites!=null &&
+              java.util.Arrays.equals(this.userSites, other.getUserSites())));
         __equalsCalc = null;
         return _equals;
     }
@@ -79,8 +71,16 @@ public abstract class PhoneNotificationTarget  extends com.amdocs.ch.api.mobile.
         }
         __hashCodeCalc = true;
         int _hashCode = super.hashCode();
-        if (getPhoneNumber() != null) {
-            _hashCode += getPhoneNumber().hashCode();
+        if (getUserSites() != null) {
+            for (int i=0;
+                 i<java.lang.reflect.Array.getLength(getUserSites());
+                 i++) {
+                java.lang.Object obj = java.lang.reflect.Array.get(getUserSites(), i);
+                if (obj != null &&
+                    !obj.getClass().isArray()) {
+                    _hashCode += obj.hashCode();
+                }
+            }
         }
         __hashCodeCalc = false;
         return _hashCode;
@@ -88,16 +88,17 @@ public abstract class PhoneNotificationTarget  extends com.amdocs.ch.api.mobile.
 
     // Type metadata
     private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(PhoneNotificationTarget.class, true);
+        new org.apache.axis.description.TypeDesc(AllUserSitesResponse.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "phoneNotificationTarget"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "allUserSitesResponse"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("phoneNumber");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "phoneNumber"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
+        elemField.setFieldName("userSites");
+        elemField.setXmlName(new javax.xml.namespace.QName("", "userSites"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "userSite"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
+        elemField.setItemQName(new javax.xml.namespace.QName("", "userSite"));
         typeDesc.addFieldDesc(elemField);
     }
 
