@@ -20,6 +20,8 @@ public class ScenarioActionAlert  implements java.io.Serializable {
 
     private long userId;
 
+    private long userSiteId;
+
     public ScenarioActionAlert() {
     }
 
@@ -29,13 +31,15 @@ public class ScenarioActionAlert  implements java.io.Serializable {
            java.lang.String alertTarget,
            com.amdocs.ch.api.mobile.EventNotificationTargetType alertTargetType,
            long scenarioAlertId,
-           long userId) {
+           long userId,
+           long userSiteId) {
            this.alertContent = alertContent;
            this.alertSubject = alertSubject;
            this.alertTarget = alertTarget;
            this.alertTargetType = alertTargetType;
            this.scenarioAlertId = scenarioAlertId;
            this.userId = userId;
+           this.userSiteId = userSiteId;
     }
 
 
@@ -158,6 +162,26 @@ public class ScenarioActionAlert  implements java.io.Serializable {
         this.userId = userId;
     }
 
+
+    /**
+     * Gets the userSiteId value for this ScenarioActionAlert.
+     * 
+     * @return userSiteId
+     */
+    public long getUserSiteId() {
+        return userSiteId;
+    }
+
+
+    /**
+     * Sets the userSiteId value for this ScenarioActionAlert.
+     * 
+     * @param userSiteId
+     */
+    public void setUserSiteId(long userSiteId) {
+        this.userSiteId = userSiteId;
+    }
+
     private java.lang.Object __equalsCalc = null;
     public synchronized boolean equals(java.lang.Object obj) {
         if (!(obj instanceof ScenarioActionAlert)) return false;
@@ -183,7 +207,8 @@ public class ScenarioActionAlert  implements java.io.Serializable {
              (this.alertTargetType!=null &&
               this.alertTargetType.equals(other.getAlertTargetType()))) &&
             this.scenarioAlertId == other.getScenarioAlertId() &&
-            this.userId == other.getUserId();
+            this.userId == other.getUserId() &&
+            this.userSiteId == other.getUserSiteId();
         __equalsCalc = null;
         return _equals;
     }
@@ -209,6 +234,7 @@ public class ScenarioActionAlert  implements java.io.Serializable {
         }
         _hashCode += new Long(getScenarioAlertId()).hashCode();
         _hashCode += new Long(getUserId()).hashCode();
+        _hashCode += new Long(getUserSiteId()).hashCode();
         __hashCodeCalc = false;
         return _hashCode;
     }
@@ -256,6 +282,12 @@ public class ScenarioActionAlert  implements java.io.Serializable {
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("userId");
         elemField.setXmlName(new javax.xml.namespace.QName("", "userId"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "long"));
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("userSiteId");
+        elemField.setXmlName(new javax.xml.namespace.QName("", "userSiteId"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "long"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);

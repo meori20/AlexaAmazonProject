@@ -100,6 +100,7 @@ public interface MobileHomeService_PortType extends java.rmi.Remote {
     public com.amdocs.ch.api.mobile.VideoSessionInProgressResponse getVideoSessionInProgress(java.lang.String streamId) throws java.rmi.RemoteException;
     public com.amdocs.ch.api.mobile.MultiValueMeasurementsResponse getMultiValueMeasurements(com.amdocs.ch.api.mobile.MobileHomeMeasurementsRequest request) throws java.rmi.RemoteException;
     public com.amdocs.ch.api.mobile.CreditSummary getCreditUsageHistory(java.lang.String username, java.util.Calendar fromDate, java.util.Calendar toDate) throws java.rmi.RemoteException;
+    public com.amdocs.ch.api.mobile.UserExternalScenariosResponse getUserExternalScenarios(long userID) throws java.rmi.RemoteException;
     public com.amdocs.ch.api.mobile.MobileHomeServiceResponse setGatewayNotificationTargets(com.amdocs.ch.api.mobile.NotificationTargets request) throws java.rmi.RemoteException;
     public com.amdocs.ch.api.mobile.MobileHomeServiceResponse isValidNotificationTarget(com.amdocs.ch.api.mobile.NotificationTargetRequest request) throws java.rmi.RemoteException;
     public com.amdocs.ch.api.mobile.MobileTokenUserIdResponse getMobileTokensByGatewayId(long gatewayID) throws java.rmi.RemoteException;

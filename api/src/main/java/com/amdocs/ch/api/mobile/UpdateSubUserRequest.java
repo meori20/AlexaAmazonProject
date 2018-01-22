@@ -7,30 +7,8 @@
 
 package com.amdocs.ch.api.mobile;
 
-public class UpdateSubUserRequest  implements java.io.Serializable {
-    private java.lang.String email;
-
-    private java.lang.String firstName;
-
-    private long gatewayId;
-
-    private java.lang.String lastName;
-
-    private com.amdocs.ch.api.mobile.NotificationTarget[] targets;
-
-    private java.lang.String PINcode;
-
-    private com.amdocs.ch.api.mobile.CustomerPermissions[] permissionsList;
-
-    private java.lang.String phone;
-
-    private long siteId;
-
-    private java.lang.Integer userCode;
-
+public class UpdateSubUserRequest  extends com.amdocs.ch.api.mobile.SubUserRequest  implements java.io.Serializable {
     private long userSiteId;
-
-    private java.lang.String username;
 
     public UpdateSubUserRequest() {
     }
@@ -46,220 +24,21 @@ public class UpdateSubUserRequest  implements java.io.Serializable {
            java.lang.String phone,
            long siteId,
            java.lang.Integer userCode,
-           long userSiteId,
-           java.lang.String username) {
-           this.email = email;
-           this.firstName = firstName;
-           this.gatewayId = gatewayId;
-           this.lastName = lastName;
-           this.targets = targets;
-           this.PINcode = PINcode;
-           this.permissionsList = permissionsList;
-           this.phone = phone;
-           this.siteId = siteId;
-           this.userCode = userCode;
-           this.userSiteId = userSiteId;
-           this.username = username;
-    }
-
-
-    /**
-     * Gets the email value for this UpdateSubUserRequest.
-     * 
-     * @return email
-     */
-    public java.lang.String getEmail() {
-        return email;
-    }
-
-
-    /**
-     * Sets the email value for this UpdateSubUserRequest.
-     * 
-     * @param email
-     */
-    public void setEmail(java.lang.String email) {
-        this.email = email;
-    }
-
-
-    /**
-     * Gets the firstName value for this UpdateSubUserRequest.
-     * 
-     * @return firstName
-     */
-    public java.lang.String getFirstName() {
-        return firstName;
-    }
-
-
-    /**
-     * Sets the firstName value for this UpdateSubUserRequest.
-     * 
-     * @param firstName
-     */
-    public void setFirstName(java.lang.String firstName) {
-        this.firstName = firstName;
-    }
-
-
-    /**
-     * Gets the gatewayId value for this UpdateSubUserRequest.
-     * 
-     * @return gatewayId
-     */
-    public long getGatewayId() {
-        return gatewayId;
-    }
-
-
-    /**
-     * Sets the gatewayId value for this UpdateSubUserRequest.
-     * 
-     * @param gatewayId
-     */
-    public void setGatewayId(long gatewayId) {
-        this.gatewayId = gatewayId;
-    }
-
-
-    /**
-     * Gets the lastName value for this UpdateSubUserRequest.
-     * 
-     * @return lastName
-     */
-    public java.lang.String getLastName() {
-        return lastName;
-    }
-
-
-    /**
-     * Sets the lastName value for this UpdateSubUserRequest.
-     * 
-     * @param lastName
-     */
-    public void setLastName(java.lang.String lastName) {
-        this.lastName = lastName;
-    }
-
-
-    /**
-     * Gets the targets value for this UpdateSubUserRequest.
-     * 
-     * @return targets
-     */
-    public com.amdocs.ch.api.mobile.NotificationTarget[] getTargets() {
-        return targets;
-    }
-
-
-    /**
-     * Sets the targets value for this UpdateSubUserRequest.
-     * 
-     * @param targets
-     */
-    public void setTargets(com.amdocs.ch.api.mobile.NotificationTarget[] targets) {
-        this.targets = targets;
-    }
-
-
-    /**
-     * Gets the PINcode value for this UpdateSubUserRequest.
-     * 
-     * @return PINcode
-     */
-    public java.lang.String getPINcode() {
-        return PINcode;
-    }
-
-
-    /**
-     * Sets the PINcode value for this UpdateSubUserRequest.
-     * 
-     * @param PINcode
-     */
-    public void setPINcode(java.lang.String PINcode) {
-        this.PINcode = PINcode;
-    }
-
-
-    /**
-     * Gets the permissionsList value for this UpdateSubUserRequest.
-     * 
-     * @return permissionsList
-     */
-    public com.amdocs.ch.api.mobile.CustomerPermissions[] getPermissionsList() {
-        return permissionsList;
-    }
-
-
-    /**
-     * Sets the permissionsList value for this UpdateSubUserRequest.
-     * 
-     * @param permissionsList
-     */
-    public void setPermissionsList(com.amdocs.ch.api.mobile.CustomerPermissions[] permissionsList) {
-        this.permissionsList = permissionsList;
-    }
-
-
-    /**
-     * Gets the phone value for this UpdateSubUserRequest.
-     * 
-     * @return phone
-     */
-    public java.lang.String getPhone() {
-        return phone;
-    }
-
-
-    /**
-     * Sets the phone value for this UpdateSubUserRequest.
-     * 
-     * @param phone
-     */
-    public void setPhone(java.lang.String phone) {
-        this.phone = phone;
-    }
-
-
-    /**
-     * Gets the siteId value for this UpdateSubUserRequest.
-     * 
-     * @return siteId
-     */
-    public long getSiteId() {
-        return siteId;
-    }
-
-
-    /**
-     * Sets the siteId value for this UpdateSubUserRequest.
-     * 
-     * @param siteId
-     */
-    public void setSiteId(long siteId) {
-        this.siteId = siteId;
-    }
-
-
-    /**
-     * Gets the userCode value for this UpdateSubUserRequest.
-     * 
-     * @return userCode
-     */
-    public java.lang.Integer getUserCode() {
-        return userCode;
-    }
-
-
-    /**
-     * Sets the userCode value for this UpdateSubUserRequest.
-     * 
-     * @param userCode
-     */
-    public void setUserCode(java.lang.Integer userCode) {
-        this.userCode = userCode;
+           java.lang.String username,
+           long userSiteId) {
+        super(
+            email,
+            firstName,
+            gatewayId,
+            lastName,
+            targets,
+            PINcode,
+            permissionsList,
+            phone,
+            siteId,
+            userCode,
+            username);
+        this.userSiteId = userSiteId;
     }
 
 
@@ -282,26 +61,6 @@ public class UpdateSubUserRequest  implements java.io.Serializable {
         this.userSiteId = userSiteId;
     }
 
-
-    /**
-     * Gets the username value for this UpdateSubUserRequest.
-     * 
-     * @return username
-     */
-    public java.lang.String getUsername() {
-        return username;
-    }
-
-
-    /**
-     * Sets the username value for this UpdateSubUserRequest.
-     * 
-     * @param username
-     */
-    public void setUsername(java.lang.String username) {
-        this.username = username;
-    }
-
     private java.lang.Object __equalsCalc = null;
     public synchronized boolean equals(java.lang.Object obj) {
         if (!(obj instanceof UpdateSubUserRequest)) return false;
@@ -313,37 +72,8 @@ public class UpdateSubUserRequest  implements java.io.Serializable {
         }
         __equalsCalc = obj;
         boolean _equals;
-        _equals = true && 
-            ((this.email==null && other.getEmail()==null) || 
-             (this.email!=null &&
-              this.email.equals(other.getEmail()))) &&
-            ((this.firstName==null && other.getFirstName()==null) || 
-             (this.firstName!=null &&
-              this.firstName.equals(other.getFirstName()))) &&
-            this.gatewayId == other.getGatewayId() &&
-            ((this.lastName==null && other.getLastName()==null) || 
-             (this.lastName!=null &&
-              this.lastName.equals(other.getLastName()))) &&
-            ((this.targets==null && other.getTargets()==null) || 
-             (this.targets!=null &&
-              java.util.Arrays.equals(this.targets, other.getTargets()))) &&
-            ((this.PINcode==null && other.getPINcode()==null) || 
-             (this.PINcode!=null &&
-              this.PINcode.equals(other.getPINcode()))) &&
-            ((this.permissionsList==null && other.getPermissionsList()==null) || 
-             (this.permissionsList!=null &&
-              java.util.Arrays.equals(this.permissionsList, other.getPermissionsList()))) &&
-            ((this.phone==null && other.getPhone()==null) || 
-             (this.phone!=null &&
-              this.phone.equals(other.getPhone()))) &&
-            this.siteId == other.getSiteId() &&
-            ((this.userCode==null && other.getUserCode()==null) || 
-             (this.userCode!=null &&
-              this.userCode.equals(other.getUserCode()))) &&
-            this.userSiteId == other.getUserSiteId() &&
-            ((this.username==null && other.getUsername()==null) || 
-             (this.username!=null &&
-              this.username.equals(other.getUsername())));
+        _equals = super.equals(obj) && 
+            this.userSiteId == other.getUserSiteId();
         __equalsCalc = null;
         return _equals;
     }
@@ -354,53 +84,8 @@ public class UpdateSubUserRequest  implements java.io.Serializable {
             return 0;
         }
         __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getEmail() != null) {
-            _hashCode += getEmail().hashCode();
-        }
-        if (getFirstName() != null) {
-            _hashCode += getFirstName().hashCode();
-        }
-        _hashCode += new Long(getGatewayId()).hashCode();
-        if (getLastName() != null) {
-            _hashCode += getLastName().hashCode();
-        }
-        if (getTargets() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getTargets());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getTargets(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getPINcode() != null) {
-            _hashCode += getPINcode().hashCode();
-        }
-        if (getPermissionsList() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getPermissionsList());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getPermissionsList(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getPhone() != null) {
-            _hashCode += getPhone().hashCode();
-        }
-        _hashCode += new Long(getSiteId()).hashCode();
-        if (getUserCode() != null) {
-            _hashCode += getUserCode().hashCode();
-        }
+        int _hashCode = super.hashCode();
         _hashCode += new Long(getUserSiteId()).hashCode();
-        if (getUsername() != null) {
-            _hashCode += getUsername().hashCode();
-        }
         __hashCodeCalc = false;
         return _hashCode;
     }
@@ -412,86 +97,9 @@ public class UpdateSubUserRequest  implements java.io.Serializable {
     static {
         typeDesc.setXmlType(new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "updateSubUserRequest"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("email");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "email"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("firstName");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "firstName"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("gatewayId");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "gatewayId"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "long"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("lastName");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "lastName"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("targets");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "targets"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "notificationTarget"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setItemQName(new javax.xml.namespace.QName("", "target"));
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("PINcode");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "PINcode"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("permissionsList");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "permissionsList"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "customerPermissions"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setItemQName(new javax.xml.namespace.QName("", "permission"));
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("phone");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "phone"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("siteId");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "siteId"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "long"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("userCode");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "userCode"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("userSiteId");
         elemField.setXmlName(new javax.xml.namespace.QName("", "userSiteId"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "long"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("username");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "username"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
     }

@@ -1,5 +1,5 @@
 /**
- * NfcInfoListResponse.java
+ * UserExternalScenariosResponse.java
  *
  * This file was auto-generated from WSDL
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
@@ -7,48 +7,48 @@
 
 package com.amdocs.ch.api.mobile;
 
-public class NfcInfoListResponse  extends com.amdocs.ch.api.mobile.MobileHomeServiceResponse  implements java.io.Serializable {
-    private com.amdocs.ch.api.mobile.NfcInfo[] nfcInfos;
+public class UserExternalScenariosResponse  extends com.amdocs.ch.api.mobile.MobileHomeServiceResponse  implements java.io.Serializable {
+    private com.amdocs.ch.api.mobile.Scenario[] scenariosList;
 
-    public NfcInfoListResponse() {
+    public UserExternalScenariosResponse() {
     }
 
-    public NfcInfoListResponse(
+    public UserExternalScenariosResponse(
            boolean success,
            java.lang.String faultCode,
            java.lang.String faultDescription,
-           com.amdocs.ch.api.mobile.NfcInfo[] nfcInfos) {
+           com.amdocs.ch.api.mobile.Scenario[] scenariosList) {
         super(
             success,
             faultCode,
             faultDescription);
-        this.nfcInfos = nfcInfos;
+        this.scenariosList = scenariosList;
     }
 
 
     /**
-     * Gets the nfcInfos value for this NfcInfoListResponse.
+     * Gets the scenariosList value for this UserExternalScenariosResponse.
      * 
-     * @return nfcInfos
+     * @return scenariosList
      */
-    public com.amdocs.ch.api.mobile.NfcInfo[] getNfcInfos() {
-        return nfcInfos;
+    public com.amdocs.ch.api.mobile.Scenario[] getScenariosList() {
+        return scenariosList;
     }
 
 
     /**
-     * Sets the nfcInfos value for this NfcInfoListResponse.
+     * Sets the scenariosList value for this UserExternalScenariosResponse.
      * 
-     * @param nfcInfos
+     * @param scenariosList
      */
-    public void setNfcInfos(com.amdocs.ch.api.mobile.NfcInfo[] nfcInfos) {
-        this.nfcInfos = nfcInfos;
+    public void setScenariosList(com.amdocs.ch.api.mobile.Scenario[] scenariosList) {
+        this.scenariosList = scenariosList;
     }
 
     private java.lang.Object __equalsCalc = null;
     public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof NfcInfoListResponse)) return false;
-        NfcInfoListResponse other = (NfcInfoListResponse) obj;
+        if (!(obj instanceof UserExternalScenariosResponse)) return false;
+        UserExternalScenariosResponse other = (UserExternalScenariosResponse) obj;
         if (obj == null) return false;
         if (this == obj) return true;
         if (__equalsCalc != null) {
@@ -57,9 +57,9 @@ public class NfcInfoListResponse  extends com.amdocs.ch.api.mobile.MobileHomeSer
         __equalsCalc = obj;
         boolean _equals;
         _equals = super.equals(obj) && 
-            ((this.nfcInfos==null && other.getNfcInfos()==null) || 
-             (this.nfcInfos!=null &&
-              java.util.Arrays.equals(this.nfcInfos, other.getNfcInfos())));
+            ((this.scenariosList==null && other.getScenariosList()==null) || 
+             (this.scenariosList!=null &&
+              java.util.Arrays.equals(this.scenariosList, other.getScenariosList())));
         __equalsCalc = null;
         return _equals;
     }
@@ -71,11 +71,11 @@ public class NfcInfoListResponse  extends com.amdocs.ch.api.mobile.MobileHomeSer
         }
         __hashCodeCalc = true;
         int _hashCode = super.hashCode();
-        if (getNfcInfos() != null) {
+        if (getScenariosList() != null) {
             for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getNfcInfos());
+                 i<java.lang.reflect.Array.getLength(getScenariosList());
                  i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getNfcInfos(), i);
+                java.lang.Object obj = java.lang.reflect.Array.get(getScenariosList(), i);
                 if (obj != null &&
                     !obj.getClass().isArray()) {
                     _hashCode += obj.hashCode();
@@ -88,17 +88,17 @@ public class NfcInfoListResponse  extends com.amdocs.ch.api.mobile.MobileHomeSer
 
     // Type metadata
     private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(NfcInfoListResponse.class, true);
+        new org.apache.axis.description.TypeDesc(UserExternalScenariosResponse.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "nfcInfoListResponse"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "userExternalScenariosResponse"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("nfcInfos");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "nfcInfos"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "nfcInfo"));
+        elemField.setFieldName("scenariosList");
+        elemField.setXmlName(new javax.xml.namespace.QName("", "scenariosList"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", "scenario"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
-        elemField.setItemQName(new javax.xml.namespace.QName("", "nfcInfo"));
+        elemField.setItemQName(new javax.xml.namespace.QName("", "scenario"));
         typeDesc.addFieldDesc(elemField);
     }
 

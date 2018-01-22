@@ -15,12 +15,14 @@ public class SiteDetails  extends com.amdocs.ch.api.mobile.Site  implements java
 
     public SiteDetails(
            java.lang.String abbrLabel,
+           java.util.Calendar lastUpdateDate,
            com.amdocs.ch.api.mobile.Id siteId,
            java.lang.String siteLabel,
            java.lang.String siteReference,
            com.amdocs.ch.api.mobile.Address address) {
         super(
             abbrLabel,
+            lastUpdateDate,
             siteId,
             siteLabel,
             siteReference);

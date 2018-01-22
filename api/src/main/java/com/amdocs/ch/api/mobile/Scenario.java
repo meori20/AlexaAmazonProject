@@ -24,6 +24,8 @@ public class Scenario  implements java.io.Serializable {
 
     private long scenarioId;
 
+    private long siteId;
+
     private com.amdocs.ch.api.mobile.ScenarioStatus status;
 
     private com.amdocs.ch.api.mobile.ScenarioTriggerEvent triggerEvent;
@@ -44,6 +46,7 @@ public class Scenario  implements java.io.Serializable {
            long gatewayId,
            java.lang.String name,
            long scenarioId,
+           long siteId,
            com.amdocs.ch.api.mobile.ScenarioStatus status,
            com.amdocs.ch.api.mobile.ScenarioTriggerEvent triggerEvent,
            com.amdocs.ch.api.mobile.ScenarioType type,
@@ -56,6 +59,7 @@ public class Scenario  implements java.io.Serializable {
            this.gatewayId = gatewayId;
            this.name = name;
            this.scenarioId = scenarioId;
+           this.siteId = siteId;
            this.status = status;
            this.triggerEvent = triggerEvent;
            this.type = type;
@@ -224,6 +228,26 @@ public class Scenario  implements java.io.Serializable {
 
 
     /**
+     * Gets the siteId value for this Scenario.
+     * 
+     * @return siteId
+     */
+    public long getSiteId() {
+        return siteId;
+    }
+
+
+    /**
+     * Sets the siteId value for this Scenario.
+     * 
+     * @param siteId
+     */
+    public void setSiteId(long siteId) {
+        this.siteId = siteId;
+    }
+
+
+    /**
      * Gets the status value for this Scenario.
      * 
      * @return status
@@ -334,6 +358,7 @@ public class Scenario  implements java.io.Serializable {
              (this.name!=null &&
               this.name.equals(other.getName()))) &&
             this.scenarioId == other.getScenarioId() &&
+            this.siteId == other.getSiteId() &&
             ((this.status==null && other.getStatus()==null) || 
              (this.status!=null &&
               this.status.equals(other.getStatus()))) &&
@@ -385,6 +410,7 @@ public class Scenario  implements java.io.Serializable {
             _hashCode += getName().hashCode();
         }
         _hashCode += new Long(getScenarioId()).hashCode();
+        _hashCode += new Long(getSiteId()).hashCode();
         if (getStatus() != null) {
             _hashCode += getStatus().hashCode();
         }
@@ -459,6 +485,12 @@ public class Scenario  implements java.io.Serializable {
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("scenarioId");
         elemField.setXmlName(new javax.xml.namespace.QName("", "scenarioId"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "long"));
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("siteId");
+        elemField.setXmlName(new javax.xml.namespace.QName("", "siteId"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "long"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);

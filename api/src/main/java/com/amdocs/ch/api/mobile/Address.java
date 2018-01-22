@@ -20,6 +20,8 @@ public class Address  implements java.io.Serializable {
 
     private java.lang.String postCode;
 
+    private java.util.Calendar lastUpdateDate;
+
     public Address() {
     }
 
@@ -29,13 +31,15 @@ public class Address  implements java.io.Serializable {
            java.lang.String city,
            java.lang.String state,
            java.lang.String country,
-           java.lang.String postCode) {
+           java.lang.String postCode,
+           java.util.Calendar lastUpdateDate) {
            this.firstAddressLine = firstAddressLine;
            this.secondAddressLine = secondAddressLine;
            this.city = city;
            this.state = state;
            this.country = country;
            this.postCode = postCode;
+           this.lastUpdateDate = lastUpdateDate;
     }
 
 
@@ -158,6 +162,26 @@ public class Address  implements java.io.Serializable {
         this.postCode = postCode;
     }
 
+
+    /**
+     * Gets the lastUpdateDate value for this Address.
+     * 
+     * @return lastUpdateDate
+     */
+    public java.util.Calendar getLastUpdateDate() {
+        return lastUpdateDate;
+    }
+
+
+    /**
+     * Sets the lastUpdateDate value for this Address.
+     * 
+     * @param lastUpdateDate
+     */
+    public void setLastUpdateDate(java.util.Calendar lastUpdateDate) {
+        this.lastUpdateDate = lastUpdateDate;
+    }
+
     private java.lang.Object __equalsCalc = null;
     public synchronized boolean equals(java.lang.Object obj) {
         if (!(obj instanceof Address)) return false;
@@ -187,7 +211,10 @@ public class Address  implements java.io.Serializable {
               this.country.equals(other.getCountry()))) &&
             ((this.postCode==null && other.getPostCode()==null) || 
              (this.postCode!=null &&
-              this.postCode.equals(other.getPostCode())));
+              this.postCode.equals(other.getPostCode()))) &&
+            ((this.lastUpdateDate==null && other.getLastUpdateDate()==null) || 
+             (this.lastUpdateDate!=null &&
+              this.lastUpdateDate.equals(other.getLastUpdateDate())));
         __equalsCalc = null;
         return _equals;
     }
@@ -216,6 +243,9 @@ public class Address  implements java.io.Serializable {
         }
         if (getPostCode() != null) {
             _hashCode += getPostCode().hashCode();
+        }
+        if (getLastUpdateDate() != null) {
+            _hashCode += getLastUpdateDate().hashCode();
         }
         __hashCodeCalc = false;
         return _hashCode;
@@ -263,6 +293,13 @@ public class Address  implements java.io.Serializable {
         elemField.setFieldName("postCode");
         elemField.setXmlName(new javax.xml.namespace.QName("", "postCode"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("lastUpdateDate");
+        elemField.setXmlName(new javax.xml.namespace.QName("", "lastUpdateDate"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "dateTime"));
+        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
     }

@@ -14,6 +14,8 @@ public class User  implements java.io.Serializable {
 
     private java.lang.Boolean authorizeMarketingMessage;
 
+    private java.util.Calendar creationDate;
+
     private java.lang.String email;
 
     private java.lang.String firstName;
@@ -53,6 +55,7 @@ public class User  implements java.io.Serializable {
            java.lang.Boolean acceptTermsConditions,
            java.lang.Boolean approvePrivatePolicy,
            java.lang.Boolean authorizeMarketingMessage,
+           java.util.Calendar creationDate,
            java.lang.String email,
            java.lang.String firstName,
            java.lang.String lastName,
@@ -72,6 +75,7 @@ public class User  implements java.io.Serializable {
            this.acceptTermsConditions = acceptTermsConditions;
            this.approvePrivatePolicy = approvePrivatePolicy;
            this.authorizeMarketingMessage = authorizeMarketingMessage;
+           this.creationDate = creationDate;
            this.email = email;
            this.firstName = firstName;
            this.lastName = lastName;
@@ -148,6 +152,26 @@ public class User  implements java.io.Serializable {
      */
     public void setAuthorizeMarketingMessage(java.lang.Boolean authorizeMarketingMessage) {
         this.authorizeMarketingMessage = authorizeMarketingMessage;
+    }
+
+
+    /**
+     * Gets the creationDate value for this User.
+     * 
+     * @return creationDate
+     */
+    public java.util.Calendar getCreationDate() {
+        return creationDate;
+    }
+
+
+    /**
+     * Sets the creationDate value for this User.
+     * 
+     * @param creationDate
+     */
+    public void setCreationDate(java.util.Calendar creationDate) {
+        this.creationDate = creationDate;
     }
 
 
@@ -515,6 +539,9 @@ public class User  implements java.io.Serializable {
             ((this.authorizeMarketingMessage==null && other.getAuthorizeMarketingMessage()==null) || 
              (this.authorizeMarketingMessage!=null &&
               this.authorizeMarketingMessage.equals(other.getAuthorizeMarketingMessage()))) &&
+            ((this.creationDate==null && other.getCreationDate()==null) || 
+             (this.creationDate!=null &&
+              this.creationDate.equals(other.getCreationDate()))) &&
             ((this.email==null && other.getEmail()==null) || 
              (this.email!=null &&
               this.email.equals(other.getEmail()))) &&
@@ -582,6 +609,9 @@ public class User  implements java.io.Serializable {
         }
         if (getAuthorizeMarketingMessage() != null) {
             _hashCode += getAuthorizeMarketingMessage().hashCode();
+        }
+        if (getCreationDate() != null) {
+            _hashCode += getCreationDate().hashCode();
         }
         if (getEmail() != null) {
             _hashCode += getEmail().hashCode();
@@ -683,6 +713,13 @@ public class User  implements java.io.Serializable {
         elemField.setFieldName("authorizeMarketingMessage");
         elemField.setXmlName(new javax.xml.namespace.QName("", "authorizeMarketingMessage"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
+        elemField.setMinOccurs(0);
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("creationDate");
+        elemField.setXmlName(new javax.xml.namespace.QName("", "creationDate"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "dateTime"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);

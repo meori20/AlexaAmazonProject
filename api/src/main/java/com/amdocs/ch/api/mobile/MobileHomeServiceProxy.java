@@ -596,6 +596,12 @@ public class MobileHomeServiceProxy implements com.amdocs.ch.api.mobile.MobileHo
     return mobileHomeService_PortType.getCreditUsageHistory(username, fromDate, toDate);
   }
   
+  public com.amdocs.ch.api.mobile.UserExternalScenariosResponse getUserExternalScenarios(long userID) throws java.rmi.RemoteException{
+    if (mobileHomeService_PortType == null)
+      _initMobileHomeServiceProxy();
+    return mobileHomeService_PortType.getUserExternalScenarios(userID);
+  }
+  
   public com.amdocs.ch.api.mobile.MobileHomeServiceResponse setGatewayNotificationTargets(com.amdocs.ch.api.mobile.NotificationTargets request) throws java.rmi.RemoteException{
     if (mobileHomeService_PortType == null)
       _initMobileHomeServiceProxy();

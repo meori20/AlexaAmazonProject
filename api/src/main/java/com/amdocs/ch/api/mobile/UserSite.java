@@ -26,6 +26,8 @@ public class UserSite  extends com.amdocs.ch.api.mobile.User  implements java.io
 
     private com.amdocs.ch.api.mobile.UserSiteUserPreferencesEntry[] userPreferences;
 
+    private java.util.Calendar userSiteCreationDate;
+
     private com.amdocs.ch.api.mobile.Id userSiteId;
 
     private com.amdocs.ch.api.mobile.UserStatus userSiteStatus;
@@ -39,6 +41,7 @@ public class UserSite  extends com.amdocs.ch.api.mobile.User  implements java.io
            java.lang.Boolean acceptTermsConditions,
            java.lang.Boolean approvePrivatePolicy,
            java.lang.Boolean authorizeMarketingMessage,
+           java.util.Calendar creationDate,
            java.lang.String email,
            java.lang.String firstName,
            java.lang.String lastName,
@@ -64,6 +67,7 @@ public class UserSite  extends com.amdocs.ch.api.mobile.User  implements java.io
            com.amdocs.ch.api.mobile.Site site,
            com.amdocs.ch.api.mobile.SecurityPanelUserCode userCode,
            com.amdocs.ch.api.mobile.UserSiteUserPreferencesEntry[] userPreferences,
+           java.util.Calendar userSiteCreationDate,
            com.amdocs.ch.api.mobile.Id userSiteId,
            com.amdocs.ch.api.mobile.UserStatus userSiteStatus,
            com.amdocs.ch.api.mobile.UserType userType) {
@@ -71,6 +75,7 @@ public class UserSite  extends com.amdocs.ch.api.mobile.User  implements java.io
             acceptTermsConditions,
             approvePrivatePolicy,
             authorizeMarketingMessage,
+            creationDate,
             email,
             firstName,
             lastName,
@@ -96,6 +101,7 @@ public class UserSite  extends com.amdocs.ch.api.mobile.User  implements java.io
         this.site = site;
         this.userCode = userCode;
         this.userPreferences = userPreferences;
+        this.userSiteCreationDate = userSiteCreationDate;
         this.userSiteId = userSiteId;
         this.userSiteStatus = userSiteStatus;
         this.userType = userType;
@@ -291,6 +297,26 @@ public class UserSite  extends com.amdocs.ch.api.mobile.User  implements java.io
 
 
     /**
+     * Gets the userSiteCreationDate value for this UserSite.
+     * 
+     * @return userSiteCreationDate
+     */
+    public java.util.Calendar getUserSiteCreationDate() {
+        return userSiteCreationDate;
+    }
+
+
+    /**
+     * Sets the userSiteCreationDate value for this UserSite.
+     * 
+     * @param userSiteCreationDate
+     */
+    public void setUserSiteCreationDate(java.util.Calendar userSiteCreationDate) {
+        this.userSiteCreationDate = userSiteCreationDate;
+    }
+
+
+    /**
      * Gets the userSiteId value for this UserSite.
      * 
      * @return userSiteId
@@ -388,6 +414,9 @@ public class UserSite  extends com.amdocs.ch.api.mobile.User  implements java.io
             ((this.userPreferences==null && other.getUserPreferences()==null) || 
              (this.userPreferences!=null &&
               java.util.Arrays.equals(this.userPreferences, other.getUserPreferences()))) &&
+            ((this.userSiteCreationDate==null && other.getUserSiteCreationDate()==null) || 
+             (this.userSiteCreationDate!=null &&
+              this.userSiteCreationDate.equals(other.getUserSiteCreationDate()))) &&
             ((this.userSiteId==null && other.getUserSiteId()==null) || 
              (this.userSiteId!=null &&
               this.userSiteId.equals(other.getUserSiteId()))) &&
@@ -450,6 +479,9 @@ public class UserSite  extends com.amdocs.ch.api.mobile.User  implements java.io
                     _hashCode += obj.hashCode();
                 }
             }
+        }
+        if (getUserSiteCreationDate() != null) {
+            _hashCode += getUserSiteCreationDate().hashCode();
         }
         if (getUserSiteId() != null) {
             _hashCode += getUserSiteId().hashCode();
@@ -533,6 +565,13 @@ public class UserSite  extends com.amdocs.ch.api.mobile.User  implements java.io
         elemField.setXmlType(new javax.xml.namespace.QName("http://mobile.api.ch.amdocs.com/", ">>userSite>userPreferences>entry"));
         elemField.setNillable(false);
         elemField.setItemQName(new javax.xml.namespace.QName("", "entry"));
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("userSiteCreationDate");
+        elemField.setXmlName(new javax.xml.namespace.QName("", "userSiteCreationDate"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "dateTime"));
+        elemField.setMinOccurs(0);
+        elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("userSiteId");

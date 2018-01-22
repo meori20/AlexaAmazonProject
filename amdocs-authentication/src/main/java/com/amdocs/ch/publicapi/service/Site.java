@@ -10,6 +10,8 @@ package com.amdocs.ch.publicapi.service;
 public class Site  implements java.io.Serializable {
     private java.lang.String abbrLabel;
 
+    private java.util.Calendar lastUpdateDate;
+
     private com.amdocs.ch.publicapi.service.Id siteId;
 
     private java.lang.String siteLabel;
@@ -21,10 +23,12 @@ public class Site  implements java.io.Serializable {
 
     public Site(
            java.lang.String abbrLabel,
+           java.util.Calendar lastUpdateDate,
            com.amdocs.ch.publicapi.service.Id siteId,
            java.lang.String siteLabel,
            java.lang.String siteReference) {
            this.abbrLabel = abbrLabel;
+           this.lastUpdateDate = lastUpdateDate;
            this.siteId = siteId;
            this.siteLabel = siteLabel;
            this.siteReference = siteReference;
@@ -48,6 +52,26 @@ public class Site  implements java.io.Serializable {
      */
     public void setAbbrLabel(java.lang.String abbrLabel) {
         this.abbrLabel = abbrLabel;
+    }
+
+
+    /**
+     * Gets the lastUpdateDate value for this Site.
+     * 
+     * @return lastUpdateDate
+     */
+    public java.util.Calendar getLastUpdateDate() {
+        return lastUpdateDate;
+    }
+
+
+    /**
+     * Sets the lastUpdateDate value for this Site.
+     * 
+     * @param lastUpdateDate
+     */
+    public void setLastUpdateDate(java.util.Calendar lastUpdateDate) {
+        this.lastUpdateDate = lastUpdateDate;
     }
 
 
@@ -125,6 +149,9 @@ public class Site  implements java.io.Serializable {
             ((this.abbrLabel==null && other.getAbbrLabel()==null) || 
              (this.abbrLabel!=null &&
               this.abbrLabel.equals(other.getAbbrLabel()))) &&
+            ((this.lastUpdateDate==null && other.getLastUpdateDate()==null) || 
+             (this.lastUpdateDate!=null &&
+              this.lastUpdateDate.equals(other.getLastUpdateDate()))) &&
             ((this.siteId==null && other.getSiteId()==null) || 
              (this.siteId!=null &&
               this.siteId.equals(other.getSiteId()))) &&
@@ -147,6 +174,9 @@ public class Site  implements java.io.Serializable {
         int _hashCode = 1;
         if (getAbbrLabel() != null) {
             _hashCode += getAbbrLabel().hashCode();
+        }
+        if (getLastUpdateDate() != null) {
+            _hashCode += getLastUpdateDate().hashCode();
         }
         if (getSiteId() != null) {
             _hashCode += getSiteId().hashCode();
@@ -171,6 +201,13 @@ public class Site  implements java.io.Serializable {
         elemField.setFieldName("abbrLabel");
         elemField.setXmlName(new javax.xml.namespace.QName("", "abbrLabel"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
+        elemField.setMinOccurs(0);
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("lastUpdateDate");
+        elemField.setXmlName(new javax.xml.namespace.QName("", "lastUpdateDate"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "dateTime"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);

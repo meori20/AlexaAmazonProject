@@ -32,6 +32,8 @@ public class CustomerGatewayDetails  extends com.amdocs.ch.api.mobile.AbstractGa
 
     private java.lang.String ip;
 
+    private java.lang.String mainUsername;
+
     private com.amdocs.ch.api.mobile.GatewayMuteMode muteMode;
 
     private com.amdocs.ch.api.mobile.GatewayPairingMode pairingMode;
@@ -79,6 +81,7 @@ public class CustomerGatewayDetails  extends com.amdocs.ch.api.mobile.AbstractGa
            com.amdocs.ch.api.mobile.Id gatewayId,
            int gsmLevel,
            java.lang.String ip,
+           java.lang.String mainUsername,
            com.amdocs.ch.api.mobile.GatewayMuteMode muteMode,
            com.amdocs.ch.api.mobile.GatewayPairingMode pairingMode,
            com.amdocs.ch.api.mobile.ArmingPartition[] partitions,
@@ -111,6 +114,7 @@ public class CustomerGatewayDetails  extends com.amdocs.ch.api.mobile.AbstractGa
         this.gatewayId = gatewayId;
         this.gsmLevel = gsmLevel;
         this.ip = ip;
+        this.mainUsername = mainUsername;
         this.muteMode = muteMode;
         this.pairingMode = pairingMode;
         this.partitions = partitions;
@@ -371,6 +375,26 @@ public class CustomerGatewayDetails  extends com.amdocs.ch.api.mobile.AbstractGa
      */
     public void setIp(java.lang.String ip) {
         this.ip = ip;
+    }
+
+
+    /**
+     * Gets the mainUsername value for this CustomerGatewayDetails.
+     * 
+     * @return mainUsername
+     */
+    public java.lang.String getMainUsername() {
+        return mainUsername;
+    }
+
+
+    /**
+     * Sets the mainUsername value for this CustomerGatewayDetails.
+     * 
+     * @param mainUsername
+     */
+    public void setMainUsername(java.lang.String mainUsername) {
+        this.mainUsername = mainUsername;
     }
 
 
@@ -655,6 +679,9 @@ public class CustomerGatewayDetails  extends com.amdocs.ch.api.mobile.AbstractGa
             ((this.ip==null && other.getIp()==null) || 
              (this.ip!=null &&
               this.ip.equals(other.getIp()))) &&
+            ((this.mainUsername==null && other.getMainUsername()==null) || 
+             (this.mainUsername!=null &&
+              this.mainUsername.equals(other.getMainUsername()))) &&
             ((this.muteMode==null && other.getMuteMode()==null) || 
              (this.muteMode!=null &&
               this.muteMode.equals(other.getMuteMode()))) &&
@@ -735,6 +762,9 @@ public class CustomerGatewayDetails  extends com.amdocs.ch.api.mobile.AbstractGa
         _hashCode += getGsmLevel();
         if (getIp() != null) {
             _hashCode += getIp().hashCode();
+        }
+        if (getMainUsername() != null) {
+            _hashCode += getMainUsername().hashCode();
         }
         if (getMuteMode() != null) {
             _hashCode += getMuteMode().hashCode();
@@ -864,6 +894,13 @@ public class CustomerGatewayDetails  extends com.amdocs.ch.api.mobile.AbstractGa
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("ip");
         elemField.setXmlName(new javax.xml.namespace.QName("", "ip"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
+        elemField.setMinOccurs(0);
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("mainUsername");
+        elemField.setXmlName(new javax.xml.namespace.QName("", "mainUsername"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
