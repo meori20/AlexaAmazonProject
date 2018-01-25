@@ -30,10 +30,11 @@ public class StartVideoStreamController {
         return principal;
     }
     
-    @GetMapping("/startVideoStream")
-    public VideoSession startVideoStream(@RequestParam(value="videoId", defaultValue="1") long name) {
+    @GetMapping(value = "/startVideoStream")
+    @ResponseBody
+    public VideoSession startVideoStream(@RequestParam("id") String id){
 		IStartVideoStreamingDelegate delegate = new StratVideoStreamingDelegate();
-		return delegate.GetVideoStream();
+		return delegate.GetVideoStream(id);
 		
     }
         @GetMapping(value = "/playSavedVideo")

@@ -35,7 +35,6 @@ public class PlaySavedVideoDelegate implements IPlaySavedVideoDelegate{
 	@Override
 	public VideoRecord GetSavedVideo(String name)
 	{
-		VideoRecord savedVideo=null;
 		VideoRecordsResponse allSavedVideos=null;
 		try {
 			AuthenticationResponse respones = m_AuthenticationServiceProxy.authenticate("PM360DX1", "Password1");
@@ -49,13 +48,10 @@ public class PlaySavedVideoDelegate implements IPlaySavedVideoDelegate{
 			request.setGatewayId(166004);
 			allSavedVideos = client.getRecordedVideos(request);
 			long length = allSavedVideos.getTotalCount();
-			String name1=allSavedVideos.getRecordedVideos(3).getFileName();
 			for(int i=0;i<length; i++)
 			{
-				if(name.equals(allSavedVideos.getRecordedVideos(i).getFileName()))
-					savedVideo=allSavedVideos.getRecordedVideos(i);
-				if(name1.equals(allSavedVideos.getRecordedVideos(i).getFileName()))
-					savedVideo=allSavedVideos.getRecordedVideos(i);
+				if(name.equals(allSavedVideos.getRecordedVideos(i).getRecordingName()))
+					return allSavedVideos.getRecordedVideos(i);
 			}
 			
 
@@ -65,7 +61,7 @@ public class PlaySavedVideoDelegate implements IPlaySavedVideoDelegate{
 			e.printStackTrace();
 		}
 		
-		return savedVideo;
+		return null;
 	}
 	
 }
