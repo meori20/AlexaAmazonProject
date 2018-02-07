@@ -50,11 +50,9 @@ public class PlaySavedVideoDelegate implements IPlaySavedVideoDelegate{
 			long length = allSavedVideos.getTotalCount();
 			for(int i=0;i<length; i++)
 			{
-				if(name.equals(allSavedVideos.getRecordedVideos(i).getRecordingName()))
+				if(allSavedVideos.getRecordedVideos(i).getFileName().contains(name))
 					return allSavedVideos.getRecordedVideos(i);
 			}
-			
-
 		} catch (RemoteException e) {
 			e.printStackTrace();
 		} catch (ServiceException e) {
