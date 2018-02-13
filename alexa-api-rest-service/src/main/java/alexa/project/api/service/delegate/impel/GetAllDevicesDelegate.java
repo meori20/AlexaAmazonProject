@@ -38,7 +38,6 @@ public class GetAllDevicesDelegate implements IGetAllDevicesDelegate{
 		 types[3]=ProductType.fromString("camera_sercomm_oc821");
 		 types[4]=ProductType.fromString("camera_sercomm_oc830");
 
-		 
 		 try {
 			AuthenticationResponse respones = m_AuthenticationServiceProxy.authenticate("PM360DX1", "Password1");
 			m_MobileHomeService_ServiceLocator = new MobileHomeService_ServiceLocator();
@@ -48,6 +47,7 @@ public class GetAllDevicesDelegate implements IGetAllDevicesDelegate{
 			((Stub) client)._setProperty(javax.xml.rpc.Call.PASSWORD_PROPERTY, respones.getAuthenticationDetails().getSecurityToken());
 			
 			devices=client.getDevicesByType(166004,types);
+			
 		} catch (RemoteException e) {
 			e.printStackTrace();
 		} catch (ServiceException e) {

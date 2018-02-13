@@ -30,7 +30,7 @@ public class StratVideoStreamingDelegate implements IStartVideoStreamingDelegate
 	}
 	
 	@Override
-	public VideoSession GetVideoStream() {
+	public VideoSession GetVideoStream(String id) {
 		VideoSession videoSession = null;
 		try {
 			AuthenticationResponse respones = m_AuthenticationServiceProxy.authenticate("PM360DX1", "Password1");
@@ -39,7 +39,7 @@ public class StratVideoStreamingDelegate implements IStartVideoStreamingDelegate
 			MobileHomeService_PortType client = m_MobileHomeService_ServiceLocator.getMobileHomeServicePort();
 			((Stub) client)._setProperty(javax.xml.rpc.Call.USERNAME_PROPERTY, "PM360DX1");
 			((Stub) client)._setProperty(javax.xml.rpc.Call.PASSWORD_PROPERTY, respones.getAuthenticationDetails().getSecurityToken());
-			videoSession = client.startVideoStreaming(218201,null);
+			videoSession = client.startVideoStreaming(Integer.parseInt(id),null);
 			
 		} catch (RemoteException e) {
 			e.printStackTrace();
